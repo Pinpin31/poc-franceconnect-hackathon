@@ -1,6 +1,8 @@
-service-providers-examples
+poc-franceconnect-hackathon
 ==========================
 
-Exemples de fournisseurs de services pour France-connect :
-- 1 exemple en NodeJS avec la librairie Passport
-- 1 exemple en Java avec la librairie MitreID
+Ce poc est le résultat du hackathon FranceConnect/Etat PlateForme pour le ministère de l'Agriculture.
+
+Il est composé de deux applications :
+* une application Java pour le Backend
+* une application javascript pour le FrontEnd 
