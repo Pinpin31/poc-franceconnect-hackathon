@@ -27,7 +27,7 @@
 
     <bean id="authenticationEntryPoint"
           class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
-        <property name="loginFormUrl" value="/openid_connect_login"/>
+        <property name="loginFormUrl" value="/spring_openid_check"/>
     </bean>
 
     <security:authentication-manager alias="authenticationManager">
@@ -57,9 +57,14 @@
         <property name="clientConfigurationService" ref="staticClientConfigurationService"/>
         <property name="authRequestOptionsService" ref="staticAuthRequestOptionsService"/>
         <property name="authRequestUrlBuilder" ref="plainAuthRequestUrlBuilder"/>
+        <property name="authenticationSuccessHandler" ref="authSuccessHandler" />
 
     </bean>
 
+    <bean id="authSuccessHandler"
+          class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
+          <property name="defaultTargetUrl" value="http://localhost:8080/admin/user" />
+    </bean>
 
     <!--
       -
@@ -72,7 +77,7 @@
         Static issuer service, returns the same issuer for every request.
     -->
     <bean class="org.mitre.openid.connect.client.service.impl.StaticSingleIssuerService" id="staticIssuerService">
-        <property name="issuer" value="http://fcp.dev.dev-franceconnect.fr"/>
+        <property name="issuer" value="http://fcp.integ01.dev-franceconnect.fr"/>
     </bean>
 
 
@@ -89,13 +94,13 @@
           class="org.mitre.openid.connect.client.service.impl.StaticServerConfigurationService">
         <property name="servers">
             <map>
-                <entry key="http://fcp.dev.dev-franceconnect.fr">
+                <entry key="http://fcp.integ01.dev-franceconnect.fr">
                     <bean class="org.mitre.openid.connect.config.ServerConfiguration">
-                        <property name="issuer" value="http://fcp.dev.dev-franceconnect.fr"/>
+                        <property name="issuer" value="http://fcp.integ01.dev-franceconnect.fr"/>
                         <property name="authorizationEndpointUri"
-                                  value="http://fcp.dev.dev-franceconnect.fr/api/v1/authorize"/>
-                        <property name="tokenEndpointUri" value="http://fcp.dev.dev-franceconnect.fr/api/v1/token"/>
-                        <property name="userInfoUri" value="http://fcp.dev.dev-franceconnect.fr/api/v1/userinfo"/>
+                                  value="https://fcp.integ01.dev-franceconnect.fr/api/v1/authorize"/>
+                        <property name="tokenEndpointUri" value="https://fcp.integ01.dev-franceconnect.fr/api/v1/token"/>
+                        <property name="userInfoUri" value="https://fcp.integ01.dev-franceconnect.fr/api/v1/userinfo"/>
                         <property name="userInfoTokenMethod" value="HEADER"/>
                     </bean>
                 </entry>
@@ -137,11 +142,11 @@
           class="org.mitre.openid.connect.client.service.impl.StaticClientConfigurationService">
         <property name="clients">
             <map>
-                <entry key="http://fcp.dev.dev-franceconnect.fr">
+                <entry key="http://fcp.integ01.dev-franceconnect.fr">
 
                     <bean class="org.mitre.oauth2.model.RegisteredClient">
-                        <property name="clientId" value="34c64533186db4044adfa18482b0d108"/>
-                        <property name="clientSecret" value="e5b417328ccf40a6f404c8286a9914d5"/>
+                        <property name="clientId" value="773501223f8673e7e499c73a9bf8ea1455b8d82ee5c00f0459f44bb92a0df6c6"/>
+                        <property name="clientSecret" value="eb190a9bee8d7f22f4533963a53157ce73cf9e188591883ba37cf0937153c194"/>
                         <property name="scope">
                             <set value-type="java.lang.String">
                                 <value>openid</value>
@@ -151,7 +156,7 @@
                         <property name="tokenEndpointAuthMethod" value=""/>
                         <property name="redirectUris">
                             <set>
-                                <value>http://fsmitreid.dev.dev-franceconnect.fr/OpenIdFranceConnect/openid_connect_login</value>
+                                <value>http://localhost:8080/spring_openid_check</value>
                             </set>
                         </property>
                     </bean>
