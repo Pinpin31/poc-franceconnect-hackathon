@@ -97,7 +97,7 @@ public class CustomOIDCAuthenticationFilter extends AbstractAuthenticationProces
 	protected static final String TARGET_SESSION_VARIABLE = "target";
 	protected final static int HTTP_SOCKET_TIMEOUT = 30000;
 
-	protected final static String FILTER_PROCESSES_URL = "/openid_connect_login";
+	protected final static String FILTER_PROCESSES_URL = "/spring_openid_check";
 
 	// Allow for time sync issues by having a window of X seconds.
 	private int timeSkewAllowance = 300;
@@ -244,6 +244,7 @@ public class CustomOIDCAuthenticationFilter extends AbstractAuthenticationProces
 				// otherwise our redirect URI is this current URL, with no query parameters
 				redirectUri = request.getRequestURL().toString();
 			}
+			logger.warn("Redirect URI -> " + redirectUri);
 			session.setAttribute(REDIRECT_URI_SESION_VARIABLE, redirectUri);
 
 			// this value comes back in the id token and is checked there

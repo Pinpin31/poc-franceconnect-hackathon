@@ -34,7 +34,7 @@
 					<div class="span8">
 						<p>Connectez vous via FranceConnect : </p>
 					
-						<form action="${pageContext.request.contextPath}/openid_connect_login" method="get">
+						<form action="${pageContext.request.contextPath}/spring_openid_check" method="get">
 							<input type="image" src="${pageContext.request.contextPath}/resources/Logo FC.png"  alt="Log In" id="login"/>
 						</form>
 					</div>
