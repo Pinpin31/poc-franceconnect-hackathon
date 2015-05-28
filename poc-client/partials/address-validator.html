@@ -1,0 +1,36 @@
+<form class="form-horizontal" data-ng-controller="adresseController">
+
+    <div layout="row" layout-margin>
+        <div flex>
+            <md-input-container>
+                <label>Adresse Validator</label>
+                <input type="text" data-ng-model="adresseSearch" placeHolder="Type Adress" />
+            </md-input-container>
+            <md-button class="md-raised md-primary" data-ng-click="search()">Chercher</md-button>
+        </div>
+    </div>
+
+
+    <div layout="row" layout-margin>
+
+        <div flex>
+
+            <md-list>
+                <md-subheader class="md-no-sticky">Adresses trouvées :</md-subheader>
+                <md-radio-group ng-model="selectedAddress">
+                    <md-list-item class="md-3-line" ng-repeat="(key, address) in addressesFind">
+
+                        <md-radio-button value="{{address.properties.label}}" data-ng-click="moveTo(address, key)">{{address.properties.label}}</md-radio-button>
+
+                    </md-list-item>
+                </md-radio-group>
+                 <md-subheader class="md-no-sticky">Adresse sélectionnée</md-subheader>
+                <md-list-item>{{selectedAddress}}</md-list-item>
+            </md-list>
+        </div>
+        <div flex>
+            <leaflet defaults="defaults" center="center" height="480px" width="640px" markers="markers"></leaflet>
+        </div>
+    </div>
+
+</form>

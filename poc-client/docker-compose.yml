@@ -1,0 +1,11 @@
+web:
+    image: nginx:1.7.9
+    volumes:
+        - ~/www:/usr/share/nginx/html
+    ports:
+        - "80:80"
+ 
+db:
+    image: mongo
+    ports:
+        - "27017:27017"

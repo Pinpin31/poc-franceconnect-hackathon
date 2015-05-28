@@ -1,0 +1,10 @@
+<form class="form-horizontal" data-ng-controller="addressAutocompleteController">
+
+    <div layout="row">
+        <div flex>
+                <md-autocomplete md-selected-item="addressAutocomplete" md-search-text="searchItem" md-item-text="item.display" md-items="item in updateAddresses(searchItem)" placeholder="Commencer à taper une adresse postale...">
+                    <span md-highlight-text="searchItem">{{item.display}}</span>
+                </md-autocomplete>
+        </div>
+    </div>
+</form>
