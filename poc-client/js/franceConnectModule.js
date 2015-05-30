@@ -5,9 +5,31 @@
  * @property {string} uriCallback
  */
 
-angular.module("franceConnectModule", [])
-    .controller('franceConnectService', ['$rootScope', '$scope',
-        function ($rootScope, $scope) {
+angular.module("franceConnectModule", []).run(function ($rootScope) {
+    $rootScope.userInfo = [];
+
+    $rootScope.$on("$locationChangeStart", function (event, next, current) {
+        var searchCode = current.match(/.*code=(.*)&.*/);
+        if (searchCode && searchCode.length > 1) {
+            var code = searchCode[1];
+            console.log("find code authorization from FC " + code);
+            $rootScope.userInfo["name"] = code;
+
+        }
+
+        //prevent location change.
+        event.preventDefault();
+
+    });
+
+}).directive('franceConnectInfo', function () {
+
+    return {
+        template: "<span>Connecté en tant que {{userInfo['name']}}</span>"
+    }
+
+}).directive('franceConnectLink',function () {
+    var controller = ['$rootScope', '$scope', function ($rootScope, $scope) {
 
             /** myApp.franceConnectScope */
             $scope.franceConnect = {
@@ -15,31 +37,21 @@ angular.module("franceConnectModule", [])
                 uriCallback: 'http://localhost/'
             };
             $scope.loginUrl = "https://fcp.integ01.dev-franceconnect.fr/api/v1/authorize" +
-                "?response_type=code&client_id=" + $scope.franceConnect.clientId + "&redirect_uri=" +
-                $scope.franceConnect.uriCallback + "&scope=openid&state=fakeState&nonce=fakeNonce";
+                    "?response_type=code&client_id=" + $scope.franceConnect.clientId + "&redirect_uri=" +
+                    $scope.franceConnect.uriCallback + "&scope=openid&state=fakeState&nonce=fakeNonce";
             $rootScope.userInfo = [];
 
-        }]).run(function ($rootScope) {
-        $rootScope.userInfo = [];
-        $rootScope.$on("$locationChangeStart", function (event, next, current) {
-            var searchCode = current.match(/.*code=(.*)&.*/);
-            if (searchCode && searchCode.length > 1) {
-                var code = searchCode[1];
-                console.log("find code authorization from FC " + code);
-                $rootScope.userInfo["name"]= code;
 
-            }
+        }];
 
-            //prevent location change.
-            event.preventDefault();
+    return {
+        restrict: 'EA', //Default in 1.3+
+        scope: {
+            datasource: '=',
+            add: '&',
+        },
+        controller: controller,
+        template: "<md-button data-ng-href='{{loginUrl}}'>Sign in</md-button>"
+    };
 
-        });
-    }).directive('franceConnectInfo', function ($rootScope) {
-        return {
-            template: "<span>Connecté en tant que {{userInfo['name']}}</span>"
-        }
-    }).directive('franceConnectLink', function ($rootScope ) {
-        return {
-            template: "<span data-ng-href='{{loginUrl}}'>Sign in</span>"
-        }
-    });
+});
