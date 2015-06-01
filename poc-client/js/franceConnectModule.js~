@@ -5,27 +5,11 @@
  * @property {string} uriCallback
  */
 
-angular.module("franceConnectModule", [])
- .run(function ($rootScope) {
-     $rootScope.userInfo = [];
- 
-     $rootScope.$on("$locationChangeStart", function (event, next, current) {
-         var searchCode = current.match(/.*code=(.*)&.*/);
-         if (searchCode && searchCode.length > 1) {
-             var code = searchCode[1];
-             console.log("find code authorization from FC " + code);
-             $rootScope.userInfo["name"] = code;
- 
-         }
- 
-     });
- 
- })
-.directive('franceConnectInfo', function () {
+angular.module("franceConnectModule", []).directive('franceConnectInfo', function () {
 
     return {
-        template: "<span data-ng-if='userInfo.length>0'>Connecté en tant que {{userInfo['name']}}</span>"+
-                    "<span data-ng-if='!userInfo.length'>Non Connecté</span>"
+        template: "<span data-ng-if='userInfo.length'>Connecté en tant que {{userInfo['name']}}</span>"+
+"<span data-ng-if='!userInfo.length'>Non Connecté</span>"
     }
 
 }).directive('franceConnectLink',function () {
@@ -40,13 +24,14 @@ angular.module("franceConnectModule", [])
                     "?response_type=code&client_id=" + $scope.franceConnect.clientId + "&redirect_uri=" +
                     $scope.franceConnect.uriCallback + "&scope=openid&state=fakeState&nonce=fakeNonce";
 	    $scope.logoutUrl = "https://fcp.integ01.dev-franceconnect.fr/api/v1/logout";
+            $rootScope.userInfo = [];
 
-            $scope.signOut = function(){
-                $rootScope.userInfo = [];
-                $window.location.href = $scope.logoutUrl;
-            }
-            $scope.userInfo = $rootScope.userInfo;
- 
+		$scope.signOut = function(){
+		$rootScope.userInfo = [];
+		$window.location.href = $scope.logoutUrl;
+	}
+
+
         }];
 
     return {

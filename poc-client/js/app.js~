@@ -7,7 +7,7 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
     "adresseTestModule",
     "leaflet-directive",
     'ngMaterial',
-    "franceConnectModule",
+"franceConnectModule",
     'autocomplete'
 ])
         .config(['$routeProvider', '$mdThemingProvider', '$mdIconProvider', '$locationProvider',
