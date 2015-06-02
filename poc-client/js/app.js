@@ -7,6 +7,7 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
     "adresseTestModule",
     "leaflet-directive",
     'ngMaterial',
+    'ipCookie',
     "franceConnectModule",
     'autocomplete'
 ])
