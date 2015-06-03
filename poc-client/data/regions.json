@@ -1,0 +1,221 @@
+{
+    "regions": [{
+            "idRegion": "1",
+            "codeRegion": "1",
+            "nomMin": "Guadeloupe",
+            "nomMaj": "GUADELOUPE"
+        },
+        {
+            "idRegion": "2",
+            "codeRegion": "2",
+            "nomMin": "Martinique",
+            "nomMaj": "MARTINIQUE"
+        },
+        {
+            "idRegion": "3",
+            "codeRegion": "3",
+            "nomMin": "Guyane",
+            "nomMaj": "GUYANE"
+        },
+        {
+            "idRegion": "4",
+            "codeRegion": "4",
+            "nomMin": "La Réunion",
+            "nomMaj": "LA REUNION"
+        },
+        {
+            "idRegion": "5",
+            "codeRegion": "5",
+            "nomMin": "Saint-Pierre-et-Miquelon",
+            "nomMaj": "SAINT-PIERRE-ET-MIQUELON"
+        },
+        {
+            "idRegion": "6",
+            "codeRegion": "6",
+            "nomMin": "Mayotte",
+            "nomMaj": "MAYOTTE"
+        },
+        {
+            "idRegion": "7",
+            "codeRegion": "7",
+            "nomMin": "Wallis et Futuna",
+            "nomMaj": "WALLIS ET FUTUNA"
+        },
+        {
+            "idRegion": "8",
+            "codeRegion": "8",
+            "nomMin": "Polynesie francaise",
+            "nomMaj": "POLYNESIE FRANCAISE"
+        },
+        {
+            "idRegion": "9",
+            "codeRegion": "9",
+            "nomMin": "Afrique et terres australes",
+            "nomMaj": "AFRIQUE ET TERRES AUSTRALES"
+        },
+        {
+            "idRegion": "10",
+            "codeRegion": "10",
+            "nomMin": "Nouvelle-Calédonie",
+            "nomMaj": "NOUVELLE-CALEDONIE"
+        },
+        {
+            "idRegion": "11",
+            "codeRegion": "11",
+            "nomMin": "Île-de-France",
+            "nomMaj": "ILE-DE-FRANCE"
+        },
+        {
+            "idRegion": "12",
+            "codeRegion": "21",
+            "nomMin": "Champagne-Ardenne",
+            "nomMaj": "CHAMPAGNE-ARDENNE"
+        },
+        {
+            "idRegion": "13",
+            "codeRegion": "22",
+            "nomMin": "Picardie",
+            "nomMaj": "PICARDIE"
+        },
+        {
+            "idRegion": "14",
+            "codeRegion": "23",
+            "nomMin": "Haute-Normandie",
+            "nomMaj": "HAUTE-NORMANDIE"
+        },
+        {
+            "idRegion": "15",
+            "codeRegion": "24",
+            "nomMin": "Centre",
+            "nomMaj": "CENTRE"
+        },
+        {
+            "idRegion": "16",
+            "codeRegion": "25",
+            "nomMin": "Basse-Normandie",
+            "nomMaj": "BASSE-NORMANDIE"
+        },
+        {
+            "idRegion": "17",
+            "codeRegion": "26",
+            "nomMin": "Bourgogne",
+            "nomMaj": "BOURGOGNE"
+        },
+        {
+            "idRegion": "18",
+            "codeRegion": "31",
+            "nomMin": "Nord-Pas-de-Calais",
+            "nomMaj": "NORD-PAS-DE-CALAIS"
+        },
+        {
+            "idRegion": "19",
+            "codeRegion": "41",
+            "nomMin": "Lorraine",
+            "nomMaj": "LORRAINE"
+        },
+        {
+            "idRegion": "20",
+            "codeRegion": "42",
+            "nomMin": "Alsace",
+            "nomMaj": "ALSACE"
+        },
+        {
+            "idRegion": "21",
+            "codeRegion": "43",
+            "nomMin": "Franche-Comté",
+            "nomMaj": "FRANCHE-COMTE"
+        },
+        {
+            "idRegion": "22",
+            "codeRegion": "52",
+            "nomMin": "Pays de la Loire",
+            "nomMaj": "PAYS DE LOIRE"
+        },
+        {
+            "idRegion": "23",
+            "codeRegion": "53",
+            "nomMin": "Bretagne",
+            "nomMaj": "BRETAGNE"
+        },
+        {
+            "idRegion": "24",
+            "codeRegion": "54",
+            "nomMin": "Poitou-Charentes",
+            "nomMaj": "POITOU-CHARENTES"
+        },
+        {
+            "idRegion": "25",
+            "codeRegion": "72",
+            "nomMin": "Aquitaine",
+            "nomMaj": "AQUITAINE"
+        },
+        {
+            "idRegion": "26",
+            "codeRegion": "73",
+            "nomMin": "Midi-Pyrénées",
+            "nomMaj": "MIDI-PYRENEES"
+        },
+        {
+            "idRegion": "27",
+            "codeRegion": "74",
+            "nomMin": "Limousin",
+            "nomMaj": "LIMOUSIN"
+        },
+        {
+            "idRegion": "28",
+            "codeRegion": "82",
+            "nomMin": "Rhône-Alpes",
+            "nomMaj": "RHONE-ALPES"
+        },
+        {
+            "idRegion": "29",
+            "codeRegion": "83",
+            "nomMin": "Auvergne",
+            "nomMaj": "AUVERGNE"
+        },
+        {
+            "idRegion": "30",
+            "codeRegion": "91",
+            "nomMin": "Languedoc-Roussillon",
+            "nomMaj": "LANGUEDOC-ROUSSILLON"
+        },
+        {
+            "idRegion": "31",
+            "codeRegion": "93",
+            "nomMin": "Provence-Alpes-Côte d'Azur",
+            "nomMaj": "PROVENCE-ALPES-COTE D'AZUR"
+        },
+        {
+            "idRegion": "32",
+            "codeRegion": "94",
+            "nomMin": "Corse",
+            "nomMaj": "CORSE"
+        },
+        {
+            "idRegion": "33",
+            "codeRegion": "99",
+            "nomMin": "Outre-mers",
+            "nomMaj": "OUTRE-MERS"
+        },
+        {
+            "idRegion": "34",
+            "codeRegion": "IC",
+            "nomMin": "Île Clipperton",
+            "nomMaj": "ÎLE DE CLIPPERTON"
+        },
+        {
+            "idRegion": "35",
+            "codeRegion": "SB",
+            "nomMin": "Saint-Barthélémy",
+            "nomMaj": "COLLECTIVITÉ D'OUTRE-MER DE SAINT-BARTHÉLEMY"
+        },
+        {
+            "idRegion": "36",
+            "codeRegion": "SM",
+            "nomMin": "Saint-Martin",
+            "nomMaj": "COLLECTIVITÉ D'OUTRE-MER DE SAINT-MARTIN"
+        },
+        {
+            "idRegion": ""
+        }]
+}

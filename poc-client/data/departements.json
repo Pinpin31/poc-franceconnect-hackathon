@@ -1,0 +1,768 @@
+{
+    "departements": [{
+            "idDepartement": "1",
+            "codeDepartement": "1",
+            "codeRegion": "82",
+            "nomMaj": "AIN",
+            "nomMin": "Ain"
+        },
+        {
+            "idDepartement": "2",
+            "codeDepartement": "2",
+            "codeRegion": "22",
+            "nomMaj": "AISNE",
+            "nomMin": "Aisne"
+        },
+        {
+            "idDepartement": "3",
+            "codeDepartement": "3",
+            "codeRegion": "83",
+            "nomMaj": "ALLIER",
+            "nomMin": "Allier"
+        },
+        {
+            "idDepartement": "4",
+            "codeDepartement": "4",
+            "codeRegion": "93",
+            "nomMaj": "ALPES-DE-HAUTE-PROVENCE",
+            "nomMin": "Alpes-de-Haute-Provence"
+        },
+        {
+            "idDepartement": "5",
+            "codeDepartement": "5",
+            "codeRegion": "93",
+            "nomMaj": "HAUTES-ALPES",
+            "nomMin": "Hautes-Alpes"
+        },
+        {
+            "idDepartement": "6",
+            "codeDepartement": "6",
+            "codeRegion": "93",
+            "nomMaj": "ALPES-MARITIMES",
+            "nomMin": "Alpes-Maritimes"
+        },
+        {
+            "idDepartement": "7",
+            "codeDepartement": "7",
+            "codeRegion": "82",
+            "nomMaj": "ARDECHE",
+            "nomMin": "Ardèche"
+        },
+        {
+            "idDepartement": "8",
+            "codeDepartement": "8",
+            "codeRegion": "21",
+            "nomMaj": "ARDENNES",
+            "nomMin": "Ardennes"
+        },
+        {
+            "idDepartement": "9",
+            "codeDepartement": "9",
+            "codeRegion": "73",
+            "nomMaj": "ARIEGE",
+            "nomMin": "Ariège"
+        },
+        {
+            "idDepartement": "10",
+            "codeDepartement": "10",
+            "codeRegion": "21",
+            "nomMaj": "AUBE",
+            "nomMin": "Aube"
+        },
+        {
+            "idDepartement": "11",
+            "codeDepartement": "11",
+            "codeRegion": "91",
+            "nomMaj": "AUDE",
+            "nomMin": "Aude"
+        },
+        {
+            "idDepartement": "12",
+            "codeDepartement": "12",
+            "codeRegion": "73",
+            "nomMaj": "AVEYRON",
+            "nomMin": "Aveyron"
+        },
+        {
+            "idDepartement": "13",
+            "codeDepartement": "13",
+            "codeRegion": "93",
+            "nomMaj": "BOUCHES-DU-RHONE",
+            "nomMin": "Bouches-du-Rhône"
+        },
+        {
+            "idDepartement": "14",
+            "codeDepartement": "14",
+            "codeRegion": "25",
+            "nomMaj": "CALVADOS",
+            "nomMin": "Calvados"
+        },
+        {
+            "idDepartement": "15",
+            "codeDepartement": "15",
+            "codeRegion": "83",
+            "nomMaj": "CANTAL",
+            "nomMin": "Cantal"
+        },
+        {
+            "idDepartement": "16",
+            "codeDepartement": "16",
+            "codeRegion": "54",
+            "nomMaj": "CHARENTE",
+            "nomMin": "Charente"
+        },
+        {
+            "idDepartement": "17",
+            "codeDepartement": "17",
+            "codeRegion": "54",
+            "nomMaj": "CHARENTE-MARITIME",
+            "nomMin": "Charente-Maritime"
+        },
+        {
+            "idDepartement": "18",
+            "codeDepartement": "18",
+            "codeRegion": "24",
+            "nomMaj": "CHER",
+            "nomMin": "Cher"
+        },
+        {
+            "idDepartement": "19",
+            "codeDepartement": "19",
+            "codeRegion": "74",
+            "nomMaj": "CORREZE",
+            "nomMin": "Corrèze"
+        },
+        {
+            "idDepartement": "20",
+            "codeDepartement": "21",
+            "codeRegion": "26",
+            "nomMaj": "COTE-D'OR",
+            "nomMin": "Côte-d'Or"
+        },
+        {
+            "idDepartement": "21",
+            "codeDepartement": "22",
+            "codeRegion": "53",
+            "nomMaj": "COTES-D'ARMOR",
+            "nomMin": "Côtes-d'Armor"
+        },
+        {
+            "idDepartement": "22",
+            "codeDepartement": "23",
+            "codeRegion": "74",
+            "nomMaj": "CREUSE",
+            "nomMin": "Creuse"
+        },
+        {
+            "idDepartement": "23",
+            "codeDepartement": "24",
+            "codeRegion": "72",
+            "nomMaj": "DORDOGNE",
+            "nomMin": "Dordogne"
+        },
+        {
+            "idDepartement": "24",
+            "codeDepartement": "25",
+            "codeRegion": "43",
+            "nomMaj": "DOUBS",
+            "nomMin": "Doubs"
+        },
+        {
+            "idDepartement": "25",
+            "codeDepartement": "26",
+            "codeRegion": "82",
+            "nomMaj": "DROME",
+            "nomMin": "Drôme"
+        },
+        {
+            "idDepartement": "26",
+            "codeDepartement": "27",
+            "codeRegion": "23",
+            "nomMaj": "EURE",
+            "nomMin": "Eure"
+        },
+        {
+            "idDepartement": "27",
+            "codeDepartement": "28",
+            "codeRegion": "24",
+            "nomMaj": "EURE-ET-LOIR",
+            "nomMin": "Eure-et-Loir"
+        },
+        {
+            "idDepartement": "28",
+            "codeDepartement": "29",
+            "codeRegion": "53",
+            "nomMaj": "FINISTERE",
+            "nomMin": "Finistère"
+        },
+        {
+            "idDepartement": "29",
+            "codeDepartement": "2A",
+            "codeRegion": "94",
+            "nomMaj": "CORSE-DU-SUD",
+            "nomMin": "Corse-du-Sud"
+        },
+        {
+            "idDepartement": "30",
+            "codeDepartement": "2B",
+            "codeRegion": "94",
+            "nomMaj": "HAUTE-CORSE",
+            "nomMin": "Haute-Corse"
+        },
+        {
+            "idDepartement": "31",
+            "codeDepartement": "30",
+            "codeRegion": "91",
+            "nomMaj": "GARD",
+            "nomMin": "Gard"
+        },
+        {
+            "idDepartement": "32",
+            "codeDepartement": "95",
+            "codeRegion": "11",
+            "nomMaj": "VAL-D'OISE",
+            "nomMin": "Val-d'Oise"
+        },
+        {
+            "idDepartement": "33",
+            "codeDepartement": "31",
+            "codeRegion": "73",
+            "nomMaj": "HAUTE-GARONNE",
+            "nomMin": "Haute-Garonne"
+        },
+        {
+            "idDepartement": "34",
+            "codeDepartement": "32",
+            "codeRegion": "73",
+            "nomMaj": "GERS",
+            "nomMin": "Gers"
+        },
+        {
+            "idDepartement": "35",
+            "codeDepartement": "33",
+            "codeRegion": "72",
+            "nomMaj": "GIRONDE",
+            "nomMin": "Gironde"
+        },
+        {
+            "idDepartement": "36",
+            "codeDepartement": "34",
+            "codeRegion": "91",
+            "nomMaj": "HERAULT",
+            "nomMin": "Hérault"
+        },
+        {
+            "idDepartement": "37",
+            "codeDepartement": "35",
+            "codeRegion": "53",
+            "nomMaj": "ILLE-ET-VILAINE",
+            "nomMin": "Ille-et-Vilaine"
+        },
+        {
+            "idDepartement": "38",
+            "codeDepartement": "36",
+            "codeRegion": "24",
+            "nomMaj": "INDRE",
+            "nomMin": "Indre"
+        },
+        {
+            "idDepartement": "39",
+            "codeDepartement": "37",
+            "codeRegion": "24",
+            "nomMaj": "INDRE-ET-LOIRE",
+            "nomMin": "Indre-et-Loire"
+        },
+        {
+            "idDepartement": "40",
+            "codeDepartement": "38",
+            "codeRegion": "82",
+            "nomMaj": "ISERE",
+            "nomMin": "Isère"
+        },
+        {
+            "idDepartement": "41",
+            "codeDepartement": "39",
+            "codeRegion": "43",
+            "nomMaj": "JURA",
+            "nomMin": "Jura"
+        },
+        {
+            "idDepartement": "42",
+            "codeDepartement": "40",
+            "codeRegion": "72",
+            "nomMaj": "LANDES",
+            "nomMin": "Landes"
+        },
+        {
+            "idDepartement": "43",
+            "codeDepartement": "41",
+            "codeRegion": "24",
+            "nomMaj": "LOIR-ET-CHER",
+            "nomMin": "Loir-et-Cher"
+        },
+        {
+            "idDepartement": "44",
+            "codeDepartement": "42",
+            "codeRegion": "82",
+            "nomMaj": "LOIRE",
+            "nomMin": "Loire"
+        },
+        {
+            "idDepartement": "45",
+            "codeDepartement": "43",
+            "codeRegion": "83",
+            "nomMaj": "HAUTE-LOIRE",
+            "nomMin": "Haute-Loire"
+        },
+        {
+            "idDepartement": "46",
+            "codeDepartement": "44",
+            "codeRegion": "52",
+            "nomMaj": "LOIRE-ATLANTIQUE",
+            "nomMin": "Loire-Atlantique"
+        },
+        {
+            "idDepartement": "47",
+            "codeDepartement": "45",
+            "codeRegion": "24",
+            "nomMaj": "LOIRET",
+            "nomMin": "Loiret"
+        },
+        {
+            "idDepartement": "48",
+            "codeDepartement": "46",
+            "codeRegion": "73",
+            "nomMaj": "LOT",
+            "nomMin": "Lot"
+        },
+        {
+            "idDepartement": "49",
+            "codeDepartement": "47",
+            "codeRegion": "72",
+            "nomMaj": "LOT-ET-GARONNE",
+            "nomMin": "Lot-et-Garonne"
+        },
+        {
+            "idDepartement": "50",
+            "codeDepartement": "48",
+            "codeRegion": "91",
+            "nomMaj": "LOZERE",
+            "nomMin": "Lozère"
+        },
+        {
+            "idDepartement": "51",
+            "codeDepartement": "49",
+            "codeRegion": "52",
+            "nomMaj": "MAINE-ET-LOIRE",
+            "nomMin": "Maine-et-Loire"
+        },
+        {
+            "idDepartement": "52",
+            "codeDepartement": "50",
+            "codeRegion": "25",
+            "nomMaj": "MANCHE",
+            "nomMin": "Manche"
+        },
+        {
+            "idDepartement": "53",
+            "codeDepartement": "51",
+            "codeRegion": "21",
+            "nomMaj": "MARNE",
+            "nomMin": "Marne"
+        },
+        {
+            "idDepartement": "54",
+            "codeDepartement": "52",
+            "codeRegion": "21",
+            "nomMaj": "HAUTE-MARNE",
+            "nomMin": "Haute-Marne"
+        },
+        {
+            "idDepartement": "55",
+            "codeDepartement": "53",
+            "codeRegion": "52",
+            "nomMaj": "MAYENNE",
+            "nomMin": "Mayenne"
+        },
+        {
+            "idDepartement": "56",
+            "codeDepartement": "54",
+            "codeRegion": "41",
+            "nomMaj": "MEURTHE-ET-MOSELLE",
+            "nomMin": "Meurthe-et-Moselle"
+        },
+        {
+            "idDepartement": "57",
+            "codeDepartement": "55",
+            "codeRegion": "41",
+            "nomMaj": "MEUSE",
+            "nomMin": "Meuse"
+        },
+        {
+            "idDepartement": "58",
+            "codeDepartement": "56",
+            "codeRegion": "53",
+            "nomMaj": "MORBIHAN",
+            "nomMin": "Morbihan"
+        },
+        {
+            "idDepartement": "59",
+            "codeDepartement": "57",
+            "codeRegion": "41",
+            "nomMaj": "MOSELLE",
+            "nomMin": "Moselle"
+        },
+        {
+            "idDepartement": "60",
+            "codeDepartement": "58",
+            "codeRegion": "26",
+            "nomMaj": "NIEVRE",
+            "nomMin": "Nièvre"
+        },
+        {
+            "idDepartement": "61",
+            "codeDepartement": "59",
+            "codeRegion": "31",
+            "nomMaj": "NORD",
+            "nomMin": "Nord"
+        },
+        {
+            "idDepartement": "62",
+            "codeDepartement": "60",
+            "codeRegion": "22",
+            "nomMaj": "OISE",
+            "nomMin": "Oise"
+        },
+        {
+            "idDepartement": "63",
+            "codeDepartement": "61",
+            "codeRegion": "25",
+            "nomMaj": "ORNE",
+            "nomMin": "Orne"
+        },
+        {
+            "idDepartement": "64",
+            "codeDepartement": "62",
+            "codeRegion": "31",
+            "nomMaj": "PAS-DE-CALAIS",
+            "nomMin": "Pas-de-Calais"
+        },
+        {
+            "idDepartement": "65",
+            "codeDepartement": "63",
+            "codeRegion": "83",
+            "nomMaj": "PUY-DE-DOME",
+            "nomMin": "Puy-de-Dôme"
+        },
+        {
+            "idDepartement": "66",
+            "codeDepartement": "64",
+            "codeRegion": "72",
+            "nomMaj": "PYRENEES-ATLANTIQUES",
+            "nomMin": "Pyrénées-Atlantiques"
+        },
+        {
+            "idDepartement": "67",
+            "codeDepartement": "65",
+            "codeRegion": "73",
+            "nomMaj": "HAUTES-PYRENEES",
+            "nomMin": "Hautes-Pyrénées"
+        },
+        {
+            "idDepartement": "68",
+            "codeDepartement": "66",
+            "codeRegion": "91",
+            "nomMaj": "PYRENEES-ORIENTALES",
+            "nomMin": "Pyrénées-Orientales"
+        },
+        {
+            "idDepartement": "69",
+            "codeDepartement": "67",
+            "codeRegion": "42",
+            "nomMaj": "BAS-RHIN",
+            "nomMin": "Bas-Rhin"
+        },
+        {
+            "idDepartement": "70",
+            "codeDepartement": "68",
+            "codeRegion": "42",
+            "nomMaj": "HAUT-RHIN",
+            "nomMin": "Haut-Rhin"
+        },
+        {
+            "idDepartement": "71",
+            "codeDepartement": "69",
+            "codeRegion": "82",
+            "nomMaj": "RHONE",
+            "nomMin": "Rhône"
+        },
+        {
+            "idDepartement": "72",
+            "codeDepartement": "70",
+            "codeRegion": "43",
+            "nomMaj": "HAUTE-SAONE",
+            "nomMin": "Haute-Saône"
+        },
+        {
+            "idDepartement": "73",
+            "codeDepartement": "71",
+            "codeRegion": "26",
+            "nomMaj": "SAONE-ET-LOIRE",
+            "nomMin": "Saône-et-Loire"
+        },
+        {
+            "idDepartement": "74",
+            "codeDepartement": "72",
+            "codeRegion": "52",
+            "nomMaj": "SARTHE",
+            "nomMin": "Sarthe"
+        },
+        {
+            "idDepartement": "75",
+            "codeDepartement": "73",
+            "codeRegion": "82",
+            "nomMaj": "SAVOIE",
+            "nomMin": "Savoie"
+        },
+        {
+            "idDepartement": "76",
+            "codeDepartement": "74",
+            "codeRegion": "82",
+            "nomMaj": "HAUTE-SAVOIE",
+            "nomMin": "Haute-Savoie"
+        },
+        {
+            "idDepartement": "77",
+            "codeDepartement": "75",
+            "codeRegion": "11",
+            "nomMaj": "PARIS",
+            "nomMin": "Paris"
+        },
+        {
+            "idDepartement": "78",
+            "codeDepartement": "76",
+            "codeRegion": "23",
+            "nomMaj": "SEINE-MARITIME",
+            "nomMin": "Seine-Maritime"
+        },
+        {
+            "idDepartement": "79",
+            "codeDepartement": "77",
+            "codeRegion": "11",
+            "nomMaj": "SEINE-ET-MARNE",
+            "nomMin": "Seine-et-Marne"
+        },
+        {
+            "idDepartement": "80",
+            "codeDepartement": "78",
+            "codeRegion": "11",
+            "nomMaj": "YVELINES",
+            "nomMin": "Yvelines"
+        },
+        {
+            "idDepartement": "81",
+            "codeDepartement": "79",
+            "codeRegion": "54",
+            "nomMaj": "DEUX-SEVRES",
+            "nomMin": "Deux-Sèvres"
+        },
+        {
+            "idDepartement": "82",
+            "codeDepartement": "80",
+            "codeRegion": "22",
+            "nomMaj": "SOMME",
+            "nomMin": "Somme"
+        },
+        {
+            "idDepartement": "83",
+            "codeDepartement": "81",
+            "codeRegion": "73",
+            "nomMaj": "TARN",
+            "nomMin": "Tarn"
+        },
+        {
+            "idDepartement": "84",
+            "codeDepartement": "82",
+            "codeRegion": "73",
+            "nomMaj": "TARN-ET-GARONNE",
+            "nomMin": "Tarn-et-Garonne"
+        },
+        {
+            "idDepartement": "85",
+            "codeDepartement": "83",
+            "codeRegion": "93",
+            "nomMaj": "VAR",
+            "nomMin": "Var"
+        },
+        {
+            "idDepartement": "86",
+            "codeDepartement": "84",
+            "codeRegion": "93",
+            "nomMaj": "VAUCLUSE",
+            "nomMin": "Vaucluse"
+        },
+        {
+            "idDepartement": "87",
+            "codeDepartement": "85",
+            "codeRegion": "52",
+            "nomMaj": "VENDEE",
+            "nomMin": "Vendée"
+        },
+        {
+            "idDepartement": "88",
+            "codeDepartement": "86",
+            "codeRegion": "54",
+            "nomMaj": "VIENNE",
+            "nomMin": "Vienne"
+        },
+        {
+            "idDepartement": "89",
+            "codeDepartement": "87",
+            "codeRegion": "74",
+            "nomMaj": "HAUTE-VIENNE",
+            "nomMin": "Haute-Vienne"
+        },
+        {
+            "idDepartement": "90",
+            "codeDepartement": "88",
+            "codeRegion": "41",
+            "nomMaj": "VOSGES",
+            "nomMin": "Vosges"
+        },
+        {
+            "idDepartement": "91",
+            "codeDepartement": "89",
+            "codeRegion": "26",
+            "nomMaj": "YONNE",
+            "nomMin": "Yonne"
+        },
+        {
+            "idDepartement": "92",
+            "codeDepartement": "90",
+            "codeRegion": "43",
+            "nomMaj": "TERRITOIRE DE BELFORT",
+            "nomMin": "Territoire de Belfort"
+        },
+        {
+            "idDepartement": "93",
+            "codeDepartement": "91",
+            "codeRegion": "11",
+            "nomMaj": "ESSONNE",
+            "nomMin": "Essonne"
+        },
+        {
+            "idDepartement": "94",
+            "codeDepartement": "92",
+            "codeRegion": "11",
+            "nomMaj": "HAUTS-DE-SEINE",
+            "nomMin": "Hauts-de-Seine"
+        },
+        {
+            "idDepartement": "95",
+            "codeDepartement": "93",
+            "codeRegion": "11",
+            "nomMaj": "SEINE-SAINT-DENIS",
+            "nomMin": "Seine-Saint-Denis"
+        },
+        {
+            "idDepartement": "96",
+            "codeDepartement": "94",
+            "codeRegion": "11",
+            "nomMaj": "VAL-DE-MARNE",
+            "nomMin": "Val-de-Marne"
+        },
+        {
+            "idDepartement": "97",
+            "codeDepartement": "971",
+            "codeRegion": "1",
+            "nomMaj": "GUADELOUPE",
+            "nomMin": "Guadeloupe"
+        },
+        {
+            "idDepartement": "98",
+            "codeDepartement": "972",
+            "codeRegion": "2",
+            "nomMaj": "MARTINIQUE",
+            "nomMin": "Martinique"
+        },
+        {
+            "idDepartement": "99",
+            "codeDepartement": "973",
+            "codeRegion": "3",
+            "nomMaj": "GUYANE",
+            "nomMin": "Guyane"
+        },
+        {
+            "idDepartement": "100",
+            "codeDepartement": "974",
+            "codeRegion": "4",
+            "nomMaj": "LA REUNION",
+            "nomMin": "La Réunion"
+        },
+        {
+            "idDepartement": "101",
+            "codeDepartement": "975",
+            "codeRegion": "5",
+            "nomMaj": "SAINT-PIERRE-ET-MIQUELON",
+            "nomMin": "Saint-Pierre-et-Miquelon"
+        },
+        {
+            "idDepartement": "102",
+            "codeDepartement": "976",
+            "codeRegion": "6",
+            "nomMaj": "MAYOTTE",
+            "nomMin": "Mayotte"
+        },
+        {
+            "idDepartement": "103",
+            "codeDepartement": "977",
+            "codeRegion": "SB",
+            "nomMaj": "SAINT-BARTHÉLEMY",
+            "nomMin": "Saint-Barthélemy"
+        },
+        {
+            "idDepartement": "104",
+            "codeDepartement": "978",
+            "codeRegion": "SM",
+            "nomMaj": "SAINT-MARTIN",
+            "nomMin": "Saint-Martin"
+        },
+        {
+            "idDepartement": "105",
+            "codeDepartement": "984",
+            "codeRegion": "9",
+            "nomMaj": "AFRIQUE ET TERRES AUSTRALES",
+            "nomMin": "Afrique et terres australes"
+        },
+        {
+            "idDepartement": "106",
+            "codeDepartement": "986",
+            "codeRegion": "7",
+            "nomMaj": "WALLIS ET FUTUNA",
+            "nomMin": "Wallis et Futuna"
+        },
+        {
+            "idDepartement": "107",
+            "codeDepartement": "987",
+            "codeRegion": "8",
+            "nomMaj": "POLYNESIE FRANCAISE",
+            "nomMin": "Polynesie francaise"
+        },
+        {
+            "idDepartement": "108",
+            "codeDepartement": "988",
+            "codeRegion": "10",
+            "nomMaj": "NOUVELLE-CALEDONIE",
+            "nomMin": "Nouvelle-Calédonie"
+        },
+        {
+            "idDepartement": "109",
+            "codeDepartement": "989",
+            "codeRegion": "IC",
+            "nomMaj": "ÎLE DE CLIPPERTON",
+            "nomMin": "Île Clipperton"
+        },
+        {
+            "idDepartement": ""
+        }]
+}
