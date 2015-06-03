@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-    <title>Télérucher</title>
+    <head>
+        <title>Télérucher</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
-    <link rel="stylesheet" href="css/leaflet.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/autocomplete.css" />
-    <link rel="stylesheet" href="css/angular-material.min.css" />
-    <link rel="stylesheet" href="assets/app.css" />
-</head>
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+        <link rel="stylesheet" href="css/leaflet.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/autocomplete.css" />
+        <link rel="stylesheet" href="css/angular-material.min.css" />
+        <link rel="stylesheet" href="assets/app.css" />
+    </head>
 
-<body ng-app="adresseTestApp" layout="column" ng-controller="appNavigationController">
+    <body ng-app="adresseTestApp" layout="column" ng-controller="appNavigationController">
 
     <md-toolbar layout="row">
         <md-button class="menu" hide-gt-sm ng-click="toggleList()" aria-label="Show Menu">
@@ -39,6 +39,10 @@
                 </md-item>
                 <md-item>
                     <md-button data-ng-href="#/addressAutocomplete">Address Autocomplete</md-button>
+                </md-item>
+                <md-item>
+                    <md-button data-ng-href="#/apiculteurInfos"><span class="ng-binding ng-scope">Mes informations</span>
+                    </md-button>
                 </md-item>
             </md-list>
         </md-sidenav>
@@ -65,6 +69,7 @@
     <script src="js/autocomplete.js"></script>
     <script src="js/adresse-controller.js"></script>
     <script src="js/adresse-validator.js"></script>
+    <script src="js/apiculteur.js"></script>
 
 </body>
 

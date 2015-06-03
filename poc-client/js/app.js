@@ -9,19 +9,24 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
     'ngMaterial',
     'ipCookie',
     "franceConnectModule",
-    'autocomplete'
+    'autocomplete',
+    'apiculteurModule'
 ])
         .config(['$routeProvider', '$mdThemingProvider', '$mdIconProvider', '$locationProvider',
-            function ($routeProvider, $mdThemingProvider, $mdIconProvider, $locationProvider ) {
+            function ($routeProvider, $mdThemingProvider, $mdIconProvider, $locationProvider) {
 
                 $routeProvider.
-                when("/addressValidator", {
+                        when("/addressValidator", {
                             templateUrl: 'partials/address-validator.html',
                             controller: 'adresseController'
                         })
-                .when('/addressAutocomplete', {
+                        .when('/addressAutocomplete', {
                             templateUrl: 'partials/address-autocomplete.html',
                             controller: 'addressAutocompleteController'
+                        })
+                        .when('/apiculteurInfos', {
+                            templateUrl: 'partials/apiculteur.html',
+                            controller: 'apiculteurController'
                         })
                         .otherwise({
                             redirectTo: '/'

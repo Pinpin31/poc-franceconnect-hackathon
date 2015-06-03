@@ -1,0 +1,46 @@
+{
+    "apiculteurs": [
+        {
+            "nom": "Menant",
+            "prenom": "Thomas",
+            "dateNaissance": "01/01/1970",
+            "email": "thomas.menant@gmail.com",
+            "adresse": {
+                "libelle": "8 rue des tulipes",
+                "codePostal": "31000",
+                "commune": "Toulouse"
+            },
+            "identifiants": [{
+                    "origine": "AMELI",
+                    "typeIdentifiant": "NIR",
+                    "valeurIdentifiant": "18712345678912345"
+                },
+                {
+                    "origine": "Impôts",
+                    "typeIdentifiant": "Numéro fiscal",
+                    "valeurIdentifiant": "1234567891011"
+                }],
+            "ruchers": [{
+                    "annee": "2014",
+                    "nom": "Rucher#1 : chez Guigui",
+                    "lat": 43.540379,
+                    "lng": 1.467993
+                }, {
+                    "annee": "2014",
+                    "nom": "Rucher#2 : rue des abeilles",
+                    "lat": 43.604394,
+                    "lng": 1.443395
+                }]
+        },
+        {
+            "nom": "Bloch",
+            "prenom": "Jean-Damien",
+            "dateNaissance": "31/12/1960",
+            "identifiants": [{
+                    "origine": "Entreprise",
+                    "typeIdentifiant": "SIRET",
+                    "valeurIdentifiant": "73282932000074"
+                }]
+        }
+    ]
+}
