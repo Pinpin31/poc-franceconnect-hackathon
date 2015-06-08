@@ -76,6 +76,16 @@ md-button.menuBtn > md-icon {
   height:24px;
 }
 
+md-grid-tile {
+    cursor: pointer;
+ cursor: hand;   
+}
+
+.cursor-hand {
+    cursor: pointer;
+ cursor: hand;   
+}
+
 #content .md-button.share:active > md-icon {
   background-color: #dadada;
   border-radius: 75%;
