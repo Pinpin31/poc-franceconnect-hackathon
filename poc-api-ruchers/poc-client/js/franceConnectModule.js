@@ -181,7 +181,7 @@ angular.module("franceConnectModule", [])
             /** myApp.franceConnectScope */
             $scope.franceConnect = {
                 clientId: '773501223f8673e7e499c73a9bf8ea1455b8d82ee5c00f0459f44bb92a0df6c6',
-                uriCallback: 'http://localhost/'
+                uriCallback: 'http://localhost:8080/spring_openid_check'
             };
             $scope.loginUrl = "https://fcp.integ01.dev-franceconnect.fr/api/v1/authorize" +
                     "?response_type=code&client_id=" + $scope.franceConnect.clientId + "&redirect_uri=" +
