@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.plec.artistes.security;
+package fr.gouv.agriculture.poc.apiruchers.security;
 
 import java.io.IOException;
 import java.net.URI;

@@ -1,0 +1,17 @@
+Installation
+------------
+
+Installation dans le dépôt maven local :
+
+  npm install
+  grunt install
+
+Si la commande grunt n'existe pas :
+
+  sudo npm install -g grunt-cli
+
+Déploiement
+-----------
+
+TODO
+Ajouter la cible deploy dans Gruntfile.js

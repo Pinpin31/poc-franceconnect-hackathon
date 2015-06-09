@@ -1,4 +1,4 @@
-package com.plec.artistes.controller;
+package fr.gouv.agriculture.poc.apiruchers.controller;
 
 import org.mitre.openid.connect.model.OIDCAuthenticationToken;
 import org.mitre.openid.connect.model.UserInfo;

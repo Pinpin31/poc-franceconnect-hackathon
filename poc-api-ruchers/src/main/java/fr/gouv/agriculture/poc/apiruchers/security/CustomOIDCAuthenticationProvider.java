@@ -1,4 +1,4 @@
-package com.plec.artistes.security;
+package fr.gouv.agriculture.poc.apiruchers.security;
 
 import java.util.Collection;
 import java.util.HashSet;

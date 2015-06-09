@@ -1,0 +1,9 @@
+{
+  "name": "poc-api-ruchers-client",
+  "description": "Client AngularJS de l'application API Ruchers",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt-maven-tasks": "~1.3.2",
+    "grunt-contrib-clean": "~0.6.0"
+  }
+}

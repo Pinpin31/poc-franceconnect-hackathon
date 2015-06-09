@@ -1,4 +1,4 @@
-package com.plec.artistes.security;
+package fr.gouv.agriculture.poc.apiruchers.security;
 
 /*******************************************************************************
  * Copyright 2014 The MITRE Corporation

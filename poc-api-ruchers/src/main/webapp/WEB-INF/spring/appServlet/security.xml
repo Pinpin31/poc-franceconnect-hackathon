@@ -17,6 +17,7 @@
 
 
     <security:http pattern="/resources/**" security="none"/>
+    <security:http pattern="/web/**" security="none"/>
 
     <security:http auto-config="false" use-expressions="true" disable-url-rewriting="true"
                    entry-point-ref="authenticationEntryPoint" pattern="/**">
@@ -43,7 +44,7 @@
 
 
     <bean id="openIdConnectAuthenticationProvider"
-          class="com.plec.artistes.security.CustomOIDCAuthenticationProvider"> <!-- Exemple pour donner des habilitations -->
+          class="fr.gouv.agriculture.poc.apiruchers.security.CustomOIDCAuthenticationProvider"> <!-- Exemple pour donner des habilitations -->
     </bean>
 
     <!--
@@ -56,7 +57,7 @@
     <!--surcharge historique car par défaut mitre demande que le fournisseur d'identité gère le paramètre nonce-->
     <!-- mais on a rétablit la conf qui vérifie le nonce -->
     <!-- il faudra réussir à enlever toute cette conf -->
-    <bean id="openIdConnectAuthenticationFilter" class="com.plec.artistes.security.CustomOIDCAuthenticationFilter">
+    <bean id="openIdConnectAuthenticationFilter" class="fr.gouv.agriculture.poc.apiruchers.security.CustomOIDCAuthenticationFilter">
         <property name="authenticationManager" ref="authenticationManager"/>
 
         <property name="issuerService" ref="staticIssuerService"/>
@@ -70,7 +71,7 @@
 
     <bean id="authSuccessHandler"
           class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
-          <property name="defaultTargetUrl" value="http://localhost:8080/admin/user" />
+          <property name="defaultTargetUrl" value="http://localhost:8080/web/apiruchers/index.html" />
     </bean>
 
     <!--

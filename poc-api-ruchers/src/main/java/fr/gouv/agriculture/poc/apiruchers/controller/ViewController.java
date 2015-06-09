@@ -1,4 +1,4 @@
-package com.plec.artistes.controller;
+package fr.gouv.agriculture.poc.apiruchers.controller;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;

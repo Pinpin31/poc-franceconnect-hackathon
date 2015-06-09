@@ -1,4 +1,4 @@
-package com.plec.artistes.controller;
+package fr.gouv.agriculture.poc.apiruchers.controller;
 
 import java.security.Principal;
 import java.util.Locale;
@@ -13,7 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.plec.artistes.security.CustomOIDCAuthenticationFilter;
+import fr.gouv.agriculture.poc.apiruchers.security.CustomOIDCAuthenticationFilter;
 
 @Controller
 @RequestMapping(value = "/admin/")
