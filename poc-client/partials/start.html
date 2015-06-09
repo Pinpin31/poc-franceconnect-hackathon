@@ -1,45 +1,46 @@
-<md-grid-list  md-cols="3" md-gutter="1em" md-row-height="16:9">
+<md-grid-list  md-cols="4" md-gutter="1em" md-row-height="16:9">
 
-<md-grid-tile data-ng-click="gotoDeclaration()" md-rowspan="2">
-  <md-grid-tile-header>
-    <h3>Mes déclarations</h3>
-  </md-grid-tile-header>
-  Cliquer pour déclarer mes ruchers
-</md-grid-tile>
+    <md-grid-tile data-ng-click="gotoDeclaration()" md-rowspan="2" alt="Cliquer pour déclarer mes ruchers">
+    <md-grid-tile-footer class="green">
+        <h3>Mes déclarations</h3>
+    </md-grid-tile-footer>
+    <md-icon md-svg-src="assets/svg/hangouts.svg" alt="Cliquer pour déclarer mes ruchers" class="avatar"></md-icon>
+    </md-grid-tile>
 
-<md-grid-tile data-ng-click="gotoRucher()" md-rowspan="2">
-  <md-grid-tile-header>
-    <h3>Mes ruchers</h3>
-  </md-grid-tile-header>
-  Cliquer pour consulter mes ruchers
-</md-grid-tile>
+    <md-grid-tile data-ng-click="gotoRucher()" md-rowspan="2">
+    <md-grid-tile-footer>
+        <h3>Mes ruchers</h3>
+    </md-grid-tile-footer>
+    Cliquer pour consulter mes ruchers
+    </md-grid-tile>
 
-<md-grid-tile data-ng-click="gotoApiculteurInfos()" style="cursor">
-  <md-grid-tile-header>
-    <h3>Mes Informations</h3>
-  </md-grid-tile-header>
-  Cliquer pour modifier mes informations personnelles
-</md-grid-tile>
+    <md-grid-tile data-ng-click="gotoApiculteurInfos()" style="cursor" alt="Cliquer pour modifier mes informations personnelles">
+    <md-grid-tile-footer class="red">
+        <h3>Mes Informations</h3>
+    </md-grid-tile-footer>
+    <md-icon md-svg-src="assets/svg/google_plus.svg" alt="Cliquer pour modifier mes informations personnelles" class="name"></md-icon>
+    
+    </md-grid-tile>
 
-<md-grid-tile data-ng-click="gotoSimulate()" style="cursor">
-  <md-grid-tile-header>
-    <h3>Simuler mes aides</h3>
-  </md-grid-tile-header>
-  Cliquer pour lancer la simulation de mes aides
-</md-grid-tile>
+    <md-grid-tile data-ng-click="gotoSimulate()" style="cursor">
+    <md-grid-tile-footer>
+        <h3>Simuler mes aides</h3>
+    </md-grid-tile-footer>
+    Cliquer pour lancer la simulation de mes aides
+    </md-grid-tile>
 
-<md-grid-tile data-ng-click="gotoDashboard()" style="cursor">
-  <md-grid-tile-header>
-    <h3>Tableau de bord</h3>
-  </md-grid-tile-header>
-  Cliquer pour accéder à mon tableau de bord
-</md-grid-tile>
+    <md-grid-tile data-ng-click="gotoDashboard()" style="cursor">
+    <md-grid-tile-footer>
+        <h3>Tableau de bord</h3>
+    </md-grid-tile-footer>
+    Cliquer pour accéder à mon tableau de bord
+    </md-grid-tile>
 
-<md-grid-tile data-ng-click="gotoNotif()" style="cursor">
-  <md-grid-tile-header>
-    <h3>Alertes et Notifications</h3>
-  </md-grid-tile-header>
-  Aucune notification
-</md-grid-tile>
+    <md-grid-tile data-ng-click="gotoNotif()" style="cursor">
+    <md-grid-tile-footer class="blue">
+        <h3>Alertes et Notifications</h3>
+    </md-grid-tile-footer>
+    <md-icon md-svg-src="assets/svg/mail.svg" alt="Cliquer pour visualiser les notifications" class="name"></md-icon>
+    </md-grid-tile>
 
 </md-grid-list>

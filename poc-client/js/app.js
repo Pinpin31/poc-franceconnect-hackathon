@@ -45,8 +45,8 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
                         .icon("phone", "./assets/svg/phone.svg", 512);
 
                 $mdThemingProvider.theme('default')
-                        .primaryPalette('brown')
-                        .accentPalette('red');
+                        .primaryPalette('yellow')
+                        .accentPalette('orange');
 
                 $locationProvider.html5Mode(false);
             }
