@@ -1,7 +1,7 @@
 web:
     image: nginx:1.7.9
     volumes:
-        - ~/poc-franceconnect-hackathon/poc-client:/usr/share/nginx/html
+        - ~/poc-franceconnect-hackathon/poc-api-ruchers-client:/usr/share/nginx/html
     ports:
         - "80:80"
  

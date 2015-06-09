@@ -2,7 +2,7 @@
 <html lang="fr">
 
     <head>
-        <title>Télérucher</title>
+        <title>API-Rucher</title>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +25,7 @@
             <md-icon md-svg-icon="menu"></md-icon>
         </md-button>
         
-        <h1><span data-ng-click="gotoStart()" class="cursor-hand"><md-icon md-svg-icon="bee"></md-icon> Téléruchers</span></h1>
+        <h1><span data-ng-click="gotoStart()" class="cursor-hand"><md-icon md-svg-icon="bee"></md-icon> API-Ruchers</span></h1>
         <france-connect-info></france-connect-info>
         <france-connect-link></france-connect-link>
 
@@ -33,21 +33,6 @@
     </md-toolbar>
 
     <div flex layout="row">
-
-        <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left">
-            <md-list>
-                <md-item>
-                    <md-button data-ng-href="#/addressValidator">Address Validator</md-button>
-                </md-item>
-                <md-item>
-                    <md-button data-ng-href="#/addressAutocomplete">Address Autocomplete</md-button>
-                </md-item>
-                <md-item>
-                    <md-button data-ng-href="#/apiculteurInfos"><span class="ng-binding ng-scope">Mes informations</span>
-                    </md-button>
-                </md-item>
-            </md-list>
-        </md-sidenav>
 
         <md-content flex id="content">
             <div class="ng-view"></div>
