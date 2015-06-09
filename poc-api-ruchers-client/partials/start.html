@@ -1,7 +1,8 @@
-<md-grid-list  md-cols-sm="1" md-cols-md="2" md-cols-gt-md="4"
-        md-row-height-gt-md="1:1" md-row-height="2:2"
-        md-gutter="12px" md-gutter-gt-sm="8px">
-
+<md-grid-list
+        md-cols-gt-md="6" md-cols-sm="3" md-cols-md="4"
+        md-row-height-gt-md="1:1" md-row-height="4:3"
+        md-gutter-gt-md="16px" md-gutter-gt-sm="8px" md-gutter="4px">
+        
     <md-grid-tile data-ng-click="gotoDeclaration()" md-rowspan="2" alt="Cliquer pour déclarer mes ruchers" class="green-low">
     <md-grid-tile-footer class="green">
         <h3>Mes déclarations</h3>
@@ -44,5 +45,19 @@
     </md-grid-tile-footer>
     <md-icon md-svg-icon="mail" alt="Cliquer pour visualiser les notifications" class="name"></md-icon>
     </md-grid-tile>
+    
+        <md-grid-tile data-ng-click="gotoTest1()" style="cursor" class="blue-low">
+    <md-grid-tile-footer class="blue">
+        <h3>Test1</h3>
+    </md-grid-tile-footer>
+    <md-icon md-svg-icon="mail" alt="Cliquer pour visualiser les notifications" class="name"></md-icon>
+    </md-grid-tile>
 
+    <md-grid-tile data-ng-click="gotoTest2()" style="cursor" class="blue-low">
+    <md-grid-tile-footer class="blue">
+        <h3>Test2</h3>
+    </md-grid-tile-footer>
+    <md-icon md-svg-icon="mail" alt="Cliquer pour visualiser les notifications" class="name"></md-icon>
+    </md-grid-tile>
+    
 </md-grid-list>
