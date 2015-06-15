@@ -27,6 +27,12 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
                         .when('/apiculteurInfos', {
                             templateUrl: 'partials/apiculteur.html',
                             controller: 'apiculteurController'
+                            
+                        })
+                        .when('/ruchers', {
+                            templateUrl: 'partials/ruchers.html',
+                            controller: 'apiculteurController'
+                            
                         }).when('/start', {
                              templateUrl: 'partials/start.html'
                              

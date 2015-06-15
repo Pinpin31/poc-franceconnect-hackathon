@@ -44,45 +44,7 @@
                     </table>
                 </md-content>
             </md-tab>
-            <md-tab label="Ruchers déclarés">
-                <md-content class="md-padding">
-                    <!--<h1 class="md-display-2">Tab Three</h1>-->
-                    <div flex>
-                        <leaflet defaults="defaults" center="center" height="480px" width="640px" markers="markers"></leaflet>
-                    </div>
-                </md-content>
-            </md-tab>
+
         </md-tabs>
     </md-content>
     <br/>
-
-    <md-content layout-padding class="autoScroll">
-        <md-input-container class="md-icon-float" >
-            <!-- Use floating label instead of placeholder -->
-            <label>Nom</label>
-            <!--<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>-->
-            <input ng-model="apiculteurs[0].nom" type="text">
-        </md-input-container>
-        <md-input-container md-icon-float>
-            <label>Prénom</label>
-            <!--<md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon>-->
-            <input ng-model="apiculteurs[0].prenom" type="text" ng-disabled="true">
-        </md-input-container>
-        <md-input-container md-icon-float>
-            <label>Date de naissance</label>
-            <!--<md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon>-->
-            <input ng-model="apiculteurs[0].dateNaissance" type="text" ng-disabled="true">
-        </md-input-container>
-        <md-input-container >
-            <label>Email</label>
-            <!-- Use floating placeholder instead of label -->
-            <!--<md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>-->
-            <input ng-model="apiculteurs[0].email" type="email" ng-disabled="true" ng-required="true">
-        </md-input-container>
-<!--        <md-input-container md-icon-float>
-            <label>Adresse</label>
-            <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon>
-            <input ng-model="apiculteurs[0].adresse.libelle + ' ' + apiculteurs[0].adresse.codePostal + ' ' + apiculteurs[0].adresse.commune"  type="text" >
-        </md-input-container>-->
-    </md-content>
-</div>

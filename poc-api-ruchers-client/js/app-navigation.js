@@ -25,6 +25,10 @@ angular.module("appNavigationModule", [])
             $scope.gotoTest2 = function(){
               $location.path('/addressAutocomplete');
             };
+            
+            $scope.gotoRucher = function () {
+                $location.path('/ruchers');
+            };
 
             $scope.goBack = function(){
                 $location.path('/start');
