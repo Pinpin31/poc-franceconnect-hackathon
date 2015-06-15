@@ -19,29 +19,26 @@ angular.module("franceConnectModule", [])
              */
             getCredential: function (code) {
                 
-//                 var timeStamp = new Date().getTime();
-//                 var serviceUrl = $location.absUrl();
-//                 if(serviceUrl.indexOf('?')>0) {
-//                      serviceUrl = serviceUrl.replace(serviceUrl.substring(serviceUrl.indexOf('?')), '');
-//                 }
-//                 if(serviceUrl.indexOf('#')>0) {
-//                     serviceUrl = serviceUrl.replace(serviceUrl.substring(serviceUrl.indexOf('#')), '');
-//                 }
-//                 var urlCredential = orion.config.remote.resourcesBaseUrl + orion.config.remote.credentialResourcePath
-//                     + "?service-ticket=" + serviceTicket
-//                     + "&timestamp=" + timeStamp
-//                     + "&service=" + serviceUrl;
+                 var timeStamp = new Date().getTime();
+                 var serviceUrl = $location.absUrl();
+                 if(serviceUrl.indexOf('?')>0) {
+                      serviceUrl = serviceUrl.replace(serviceUrl.substring(serviceUrl.indexOf('?')), '');
+                 }
+                 if(serviceUrl.indexOf('#')>0) {
+                     serviceUrl = serviceUrl.replace(serviceUrl.substring(serviceUrl.indexOf('#')), '');
+                 }
+                 var urlCredential = "http://localhost:8080/spring_openid_check?code=" + code;
                    var deferred = $q.defer();
-//                 $http.get(urlCredential).
-//                     success(function (data) {
-//                         logger.debug('Success to get Credential with ticket ' + serviceTicket + ': ' + JSON.stringify(data));
-//                         deferred.resolve(data);
-//                     }).
-//                     error(function () {
-//                         logger.error('Error to get Credential  with ticket ' + serviceTicket);
-//                         deferred.resolve({});
-//                     });
-                   deferred.resolve({login: "test.test", name : "Test", secret: "secret", application: "poc-client"});
+                 $http.get(urlCredential).
+                     success(function (data) {
+                         logger.debug('Success to get Credential with ticket ' + serviceTicket + ': ' + JSON.stringify(data));
+                         deferred.resolve(data);
+                     }).
+                     error(function () {
+                         logger.error('Error to get Credential  with ticket ' + serviceTicket);
+                         deferred.resolve({});
+                     });
+                   //deferred.resolve({login: "test.test", name : "Test", secret: "secret", application: "poc-client"});
                    return deferred.promise;
             },
 
@@ -181,7 +178,7 @@ angular.module("franceConnectModule", [])
             /** myApp.franceConnectScope */
             $scope.franceConnect = {
                 clientId: '773501223f8673e7e499c73a9bf8ea1455b8d82ee5c00f0459f44bb92a0df6c6',
-                uriCallback: 'http://localhost/'
+                uriCallback: 'http://localhost:8080/spring_openid_check'
             };
             $scope.loginUrl = "https://fcp.integ01.dev-franceconnect.fr/api/v1/authorize" +
                     "?response_type=code&client_id=" + $scope.franceConnect.clientId + "&redirect_uri=" +
