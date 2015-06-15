@@ -1,0 +1,40 @@
+<go-back-directive title="Mes Ruchers"></go-back-directive> 
+
+<div data-g-controller="apiculteurController">
+          
+                
+                    <div layout="row" layout-margin>
+                <div flex>
+                 <table cellspacing='0'>
+                        <thead>
+                            <tr>
+                                <th>
+                        <p>Année</p>    
+                        </th>
+                        <th>
+                        <p>Nom</p>    
+                        </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="rucher in apiculteurs[0].ruchers">
+                                <td>
+                                    {{rucher.annee}}
+                                </td>
+                                <td>
+                                    {{rucher.nom}}
+                                </td>
+               
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                
+                    <div flex>
+                        <leaflet defaults="defaults" center="center" height="480px" width="640px" markers="markers"></leaflet>
+                    </div>
+                    
+                   </div>
+
+    <br/>
+</div>
