@@ -43,9 +43,9 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
                         .icon("hangouts", "./assets/svg/hangouts.svg", 512)
                         .icon("twitter", "./assets/svg/twitter.svg", 512)
                         .icon("phone", "./assets/svg/phone.svg", 512)
-                        .icon("mail", "./assets/svg/mail.svg", 512)
+                        .icon("mail", "./assets/svg/mail.svg", 1024)
                         .icon("ble", "./assets/svg/noun-ble.svg", 512)
-                        .icon("aide", "./assets/svg/noun-aide.svg", 100)
+                        .icon("aide", "./assets/svg/noun-aide.svg", 512)
                         .icon("bio", "./assets/svg/noun-bio.svg", 512)
                         .icon("bee", "./assets/svg/noun-bee.svg", 100);
 
