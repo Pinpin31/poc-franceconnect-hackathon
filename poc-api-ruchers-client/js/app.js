@@ -10,7 +10,8 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
     'ipCookie',
     "franceConnectModule",
     'autocomplete',
-    'apiculteurModule'
+    'apiculteurModule',
+    'dashboardModule'
 ])
         .config(['$routeProvider', '$mdThemingProvider', '$mdIconProvider', '$locationProvider',
             function ($routeProvider, $mdThemingProvider, $mdIconProvider, $locationProvider) {
@@ -30,6 +31,9 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
                         }).when('/start', {
                              templateUrl: 'partials/start.html'
                              
+                        }).when('/dashboard', {
+                             templateUrl: 'partials/dashboard.html',
+                             controller: 'dashboardController'
                         })
                         .otherwise({
                             redirectTo: '/start'

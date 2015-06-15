@@ -18,6 +18,10 @@ angular.module("appNavigationModule", [])
               $location.path('/apiculteurInfos');
             };
             
+            $scope.gotoDashboard = function(){
+              $location.path('/dashboard');
+            };
+            
             $scope.gotoTest1 = function(){
               $location.path('/addressValidator');
             };
