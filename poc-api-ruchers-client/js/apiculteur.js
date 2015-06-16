@@ -27,7 +27,7 @@
                     var local_icons = {
                         default_icon: {},
                         bee_icon: {
-                            iconUrl: 'favicon.ico',
+                            iconUrl: 'assets/svg/bee.svg',
                             //shadowUrl: 'examples/img/leaf-shadow.png',
                             iconSize: [38, 38], // size of the icon
                             shadowSize: [50, 50], // size of the shadow
