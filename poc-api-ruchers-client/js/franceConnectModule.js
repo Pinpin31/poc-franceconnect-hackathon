@@ -19,23 +19,15 @@ angular.module("franceConnectModule", [])
              */
             getCredential: function (code) {
                 
-                 var timeStamp = new Date().getTime();
-                 var serviceUrl = $location.absUrl();
-                 if(serviceUrl.indexOf('?')>0) {
-                      serviceUrl = serviceUrl.replace(serviceUrl.substring(serviceUrl.indexOf('?')), '');
-                 }
-                 if(serviceUrl.indexOf('#')>0) {
-                     serviceUrl = serviceUrl.replace(serviceUrl.substring(serviceUrl.indexOf('#')), '');
-                 }
-                 var urlCredential = "http://localhost:8080/spring_openid_check?code=" + code;
+                 var urlCredential = "http://localhost:8080/openid/userinfo";
                    var deferred = $q.defer();
                  $http.get(urlCredential).
                      success(function (data) {
-                         logger.debug('Success to get Credential with ticket ' + serviceTicket + ': ' + JSON.stringify(data));
+                         console.log('Success to get Credential with ticket : ' + JSON.stringify(data));
                          deferred.resolve(data);
                      }).
                      error(function () {
-                         logger.error('Error to get Credential  with ticket ' + serviceTicket);
+                         console.log('Error to get Credential');
                          deferred.resolve({});
                      });
                    //deferred.resolve({login: "test.test", name : "Test", secret: "secret", application: "poc-client"});
@@ -70,9 +62,9 @@ angular.module("franceConnectModule", [])
             getCredentialInLocalStore: function () {
                 var cookieText = ipCookie(cookieName);
                 if (angular.isDefined(cookieText)) {
-                    $rootScope.login = cookieText.login;
-                    if (angular.isDefined(cookieText.name)) {
-                        $rootScope.login = cookieText.name;
+                    $rootScope.login = cookieText.family_name;
+                    if (angular.isDefined(cookieText.given_name)) {
+                        $rootScope.login = cookieText.given_name + ' ' + cookieText.family_name;
                     }
                     return cookieText;
                 }
@@ -89,9 +81,9 @@ angular.module("franceConnectModule", [])
                 if (credential === null || credential === undefined) {
                     return false;
                 }
-                return (angular.isDefined(credential.secret)
-                    && angular.isDefined(credential.login)
-                    && angular.isDefined(credential.application)
+                return (angular.isDefined(credential.family_name)
+                    && angular.isDefined(credential.given_name)
+                    
                     );
             },
 
@@ -100,38 +92,8 @@ angular.module("franceConnectModule", [])
              * @returns {boolean|*}
              */
             isAuthenticated: function () {
-                return angular.isDefined($rootScope.login);
-            },
-
-            /**
-             * Permet de récupérer le paramètre contenant la valeur du code renvoyé par FC
-             * @returns {*}
-             */
-            getParamCodeFromUrl: function () {
-                // si le path est vide, c'est que l'on revient de FC
-                if ($location.path() === "") {
-                    // on récupère le ticket dans l'url
-                    var absUrl = $location.absUrl();
-                    var re = new RegExp(".*[?&]code=([^&]+)(&|$)");
-                    var searchCode = absUrl.match(re);
-                    var code = (searchCode ? searchCode[1] : "");
-                    console.log("find code authorization from FC " + code);
-                    return code;
-                }
-                return "";
-            },
-
-            /**
-             * Permet de supprimer le paramètre contenant le ticket car il est placé avant le path Angular
-             * et cela pose problème si on le garde dans l'url. Angular ne le voit pas et ne veut pas le
-             * supprimer !
-             * Alors on réalise une redirection de sauvage en javascript !
-             */
-            cleanUrlFromCode: function () {
-                var absUrl = $location.absUrl();
-                var newUrl = absUrl.replace(absUrl.substring(absUrl.indexOf('?')), '');
-                //window.history.pushState('page2', 'Title', newUrl); // non fonctionnel :(
-                document.location.href = newUrl;
+                var credential = this.getCredentialInLocalStore();
+                return angular.isDefined(credential.family_name);
             },
 
             /**
@@ -139,17 +101,15 @@ angular.module("franceConnectModule", [])
              * Méthode à appeler dans la méthode run du ficier app.js
              */
             authenticate: function(){
-                var code = this.getParamCodeFromUrl();
-                if (code != "" && !this.isAuthenticated()) {
+                if(!this.isAuthenticated()){
                     self=this;
-                    this.getCredential(code).then(function (result) {
+                    this.getCredential().then(function (result) {
                         if (self.isValidCredential(result)) {
                             self.storeCredentialInLocalStore(result);
                             $rootScope.$emit('fc.authentication.success');
                         } else {
                             $rootScope.$emit('fc.authentication.error');
                         }
-                        self.cleanUrlFromCode();
                     });
                 }
             }
@@ -182,7 +142,7 @@ angular.module("franceConnectModule", [])
             };
             $scope.loginUrl = "https://fcp.integ01.dev-franceconnect.fr/api/v1/authorize" +
                     "?response_type=code&client_id=" + $scope.franceConnect.clientId + "&redirect_uri=" +
-                    $scope.franceConnect.uriCallback + "&scope=openid&state=fakeState&nonce=fakeNonce";
+                    encodeURIComponent($scope.franceConnect.uriCallback) + "&scope=openid&state=fakeState&nonce=fakeNonce";
 	    $scope.logoutUrl = "https://fcp.integ01.dev-franceconnect.fr/api/v1/logout";
 
             $scope.signOut = function(){
@@ -198,7 +158,7 @@ angular.module("franceConnectModule", [])
              */
             $scope.isLogged = function () {
                 var credential = FCauthenticationService.getCredentialInLocalStore();
-                return angular.isDefined(credential.login);
+                return angular.isDefined(credential.family_name);
             };
 
  

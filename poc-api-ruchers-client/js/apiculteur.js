@@ -15,7 +15,7 @@
                                         lat: data.apiculteurs[0].ruchers[i].lat,
                                         lng: data.apiculteurs[0].ruchers[i].lng,
                                         message: data.apiculteurs[0].ruchers[i].nom,
-                                        icon: local_icons.bee_icon
+                                        icon: local_icons.yellow_icon
                                     };
                                 }
                             })
@@ -34,6 +34,11 @@
 //                            iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
 //                            shadowAnchor: [4, 62], // the same for the shadow
 //                            popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
+                        },
+                        yellow_icon: {
+                            color: 'yellow',
+                            fillColor: '#f03',
+                            fillOpacity: 0.5   
                         }
                     };
 
@@ -48,5 +53,48 @@
                             zoom: 11
                         }
                     });
+                    
+                    $scope.addRucher = function () {
+                        
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(newRucher, showError);
+                        } else {
+                            console.log("Geolocation is not supported by this browser.");
+                        }
+                    };
+                    
+                    function newRucher(position) {
+                        console.log( "Latitude: " + position.coords.latitude + 
+                        "<br>Longitude: " + position.coords.longitude); 
+                        var rucher = {
+                                        lat: position.coords.latitude,
+                                        lng: position.coords.longitude,
+                                        message: 'Nouveau Rucher'
+                                    };
+                        $scope.markers['marker']= rucher;
+                        $scope.apiculteurs[0].ruchers.push({"annee": "2014",
+                    "nom": "Nouveau Rucher",
+                    "lat": position.coords.latitude,
+                    "lng": position.coords.longitude
+                });
+                    }
+                    
+                    function showError(error) {
+                        switch(error.code) {
+                            case error.PERMISSION_DENIED:
+                                console.log("User denied the request for Geolocation.");
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                console.log("Location information is unavailable.");
+                                break;
+                            case error.TIMEOUT:
+                                console.log("The request to get user location timed out.");
+                                break;
+                            case error.UNKNOWN_ERROR:
+                                console.log("An unknown error occurred.");
+                                break;
+                        }
+                    }
+                    
                 }]);
 }());
