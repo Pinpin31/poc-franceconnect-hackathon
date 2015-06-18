@@ -170,7 +170,7 @@ angular.module("franceConnectModule", [])
             add: '&',
         },
         controller: 'franceConnectController',
-        template: "<md-button data-ng-if='!isLogged()' data-ng-click='signIn()'>Sign in</md-button>"+
+        template: "<md-button data-ng-if='!isLogged()' data-ng-click='signIn()'><img src='css/images/logo-fc.png' width='80px' height='80px' /></md-button>"+
 "<md-button data-ng-if='isLogged()' data-ng-click='signOut()'>Sign out</md-button>"
     };
 
