@@ -2,28 +2,10 @@
 (function () {
     'use strict';
     angular.module('apiculteurModule', ['ngRoute'])
-            .controller('apiculteurController', ['$scope', '$http', '$log', function ($scope, $http, $log) {
-
-                    //Récupération des infos des apiculteurs
-                    $http.get('data/apiculteurs.json')
-                            .success(function (data, status, headers, config) {
-                                $scope.apiculteurs = data.apiculteurs;
-
-                                $scope.markers = {};
-                                for (var i = 0, len = data.apiculteurs[0].ruchers.length; i < len; i++) {
-                                    $scope.markers[i] = {
-                                        lat: data.apiculteurs[0].ruchers[i].lat,
-                                        lng: data.apiculteurs[0].ruchers[i].lng,
-                                        message: data.apiculteurs[0].ruchers[i].nom,
-                                        icon: local_icons.yellow_icon
-                                    };
-                                }
-                            })
-                            .error(function (data, status, headers, config) {
-                                $log.error("Erreur HTTP " + status + ".");
-                            });
-
-                    //Gestion de la carte des ruchers
+            .controller('apiculteurController', ['$scope', '$http', '$log', '$rootScope',
+                        function ($scope, $http, $log, $rootScope) {
+                            
+                            //Gestion de la carte des ruchers
                     var local_icons = {
                         default_icon: {},
                         bee_icon: {
@@ -41,6 +23,33 @@
                             fillOpacity: 0.5   
                         }
                     };
+                
+                if(!$rootScope.apiculteurs){
+                    //Récupération des infos des apiculteurs
+                    $http.get('data/apiculteurs.json')
+                            .success(function (data, status, headers, config) {
+                                $rootScope.apiculteurs = data.apiculteurs;
+
+                                loadMarkers();
+                            })
+                            .error(function (data, status, headers, config) {
+                                $log.error("Erreur HTTP " + status + ".");
+                            });
+                }else{
+                    loadMarkers();
+                }
+                
+                function loadMarkers(){
+                    $scope.markers = {};
+                                for (var i = 0, len = $rootScope.apiculteurs[0].ruchers.length; i < len; i++) {
+                                    $scope.markers[i] = {
+                                        lat: $rootScope.apiculteurs[0].ruchers[i].lat,
+                                        lng: $rootScope.apiculteurs[0].ruchers[i].lng,
+                                        message: $rootScope.apiculteurs[0].ruchers[i].nom,
+                                        icon: local_icons.yellow_icon
+                                    };
+                                }
+                }
 
                     angular.extend($scope, {
                         defaults: {
@@ -82,7 +91,7 @@
                                         message: 'Nouveau Rucher'
                                     };
                         $scope.markers['marker']= rucher;
-                        $scope.apiculteurs[0].ruchers.push({"annee": "2015",
+                        $rootScope.apiculteurs[0].ruchers.push({"annee": "2015",
                                                             "nom": "Nouveau Rucher",
                                                             "lat": position.coords.latitude,
                                                             "lng": position.coords.longitude

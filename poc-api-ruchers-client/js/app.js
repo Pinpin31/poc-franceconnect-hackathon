@@ -14,7 +14,7 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
     'dashboardModule',
     'ngMdIcons'
 ])
-        .config(['$routeProvider', '$mdThemingProvider', '$mdIconProvider', '$locationProvider',
+        .config(['$routeProvider', '$mdThemingProvider', '$mdIconProvider', '$locationProvider', 
             function ($routeProvider, $mdThemingProvider, $mdIconProvider, $locationProvider) {
 
                 $routeProvider.
@@ -65,5 +65,6 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
                         .accentPalette('orange');
 
                 $locationProvider.html5Mode(false);
+                
             }
         ]);
