@@ -46,6 +46,12 @@
                         defaults: {
                             tileLayer: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                             maxZoom: 20
+                        },
+                        events: {
+                            map: {
+                                enable: ['click', 'drag', 'blur', 'touchstart'],
+                                logic: 'emit'
+                            }
                         }
                     });
                     
@@ -89,6 +95,15 @@
                             };
                         
                         }
+                        
+                    $scope.$on("leafletDirectiveMap.click", function(event, args){
+                        var leafEvent = args.leafletEvent;
+                        var position = new Position();
+                        position.coords.latitude=leafEvent.latlng.lat;
+                        position.coords.longitude=leafEvent.latlng.lng;
+
+                        newRucher(position);
+                    });
                     
                     function showError(error) {
                         switch(error.code) {
