@@ -58,7 +58,9 @@
                     $scope.addRucher = function () {
                         
                         if (navigator.geolocation) {
-                            navigator.geolocation.getCurrentPosition(newRucher, showError);
+                            navigator.geolocation.getCurrentPosition(newRucher, showError, {
+                                                enableHighAccuracy: true,timeout : 50000
+                                            });
                         } else {
                             console.log("Geolocation is not supported by this browser.");
                         }
