@@ -11,7 +11,8 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
     "franceConnectModule",
     'autocomplete',
     'apiculteurModule',
-    'dashboardModule'
+    'dashboardModule',
+    'ngMdIcons'
 ])
         .config(['$routeProvider', '$mdThemingProvider', '$mdIconProvider', '$locationProvider',
             function ($routeProvider, $mdThemingProvider, $mdIconProvider, $locationProvider) {

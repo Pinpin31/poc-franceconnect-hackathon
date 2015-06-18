@@ -278,3 +278,27 @@ table tr:hover td {
     height: 100%
     
 }
+
+/*** Dedicace à Céli Bleu Pétrole !! */
+.bleu-petrole{
+    background-color: #193140;
+}
+.bleu-petrole-font{
+    color: #193140;
+    font-weight: bold;
+}
+.yellow{
+  background-color: #F2E749;   
+}
+.yellow-darker{
+        background-color: #F2C84B;
+}
+.orange{
+        background-color: #F2A74B;
+}
+.orange-color{
+        color: #F2A74B;
+}
+.orange-darker{
+        background-color: #F25749;
+}

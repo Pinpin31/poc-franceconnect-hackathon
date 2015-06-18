@@ -1,63 +1,44 @@
 <md-grid-list
-        md-cols-gt-md="6" md-cols-sm="3" md-cols-md="4"
-        md-row-height-gt-md="1:1" md-row-height="4:3"
+        md-cols-gt-md="6" md-cols-sm="1" md-cols-md="4"
+        md-row-height-gt-md="1:1" md-row-height="4:3" md-row-height-sm="6:2"
         md-gutter-gt-md="16px" md-gutter-gt-sm="8px" md-gutter="4px">
         
-    <md-grid-tile data-ng-click="gotoDeclaration()" md-rowspan="2" alt="Cliquer pour déclarer mes ruchers" class="green-low">
-    <md-grid-tile-footer class="green">
-        <h3>Mes déclarations</h3>
-    </md-grid-tile-footer>
-    <md-icon md-svg-icon="hangouts" alt="Cliquer pour déclarer mes ruchers" class="avatar"></md-icon>
+    <md-grid-tile data-ng-click="gotoDeclaration()" alt="Cliquer pour déclarer mes ruchers">
+           <ng-md-icon icon="assignment"  size="64"></ng-md-icon>
+           <md-grid-tile-footer class="bleu-petrole"><h3>Déclarer</h3></md-grid-tile-footer>
     </md-grid-tile>
 
-    <md-grid-tile data-ng-click="gotoRucher()" md-rowspan="2" class="yellow-low">
-    <md-grid-tile-footer class="yellow">
-        <h3>Mes ruchers</h3>
-    </md-grid-tile-footer>
-    Cliquer pour consulter mes ruchers
-    </md-grid-tile>
-
-    <md-grid-tile data-ng-click="gotoApiculteurInfos()" style="cursor" alt="Cliquer pour modifier mes informations personnelles" class="red-low">
-    <md-grid-tile-footer class="red">
-        <h3>Mes Informations</h3>
-    </md-grid-tile-footer>
-    <md-icon md-svg-icon="google_plus" alt="Cliquer pour modifier mes informations personnelles" class="name"></md-icon>
-    
+    <md-grid-tile data-ng-click="gotoRucher()">
+        <ng-md-icon icon="location_on"  size="64"></ng-md-icon>
+        <md-grid-tile-footer class="bleu-petrole"><h3>Localiser mes ruchers</h3></md-grid-tile-footer>
     </md-grid-tile>
 
     <md-grid-tile data-ng-click="gotoSimulate()" style="cursor">
-    <md-grid-tile-footer>
-        <h3>Simuler mes aides</h3>
-    </md-grid-tile-footer>
-    <md-icon md-svg-icon="aide" alt="Cliquer pour simuler mes aides" class="name"></md-icon>
+        <ng-md-icon icon="attach_money" class="orange-color" size="64"></ng-md-icon>
+        <md-grid-tile-footer class="yellow bleu-petrole-font"><h3>Demander mes aides</h3></md-grid-tile-footer>
     </md-grid-tile>
 
     <md-grid-tile data-ng-click="gotoDashboard()" style="cursor">
-    <md-grid-tile-footer>
-        <h3>Tableau de bord</h3>
-    </md-grid-tile-footer>
-    Cliquer pour accéder à mon tableau de bord
-    </md-grid-tile>
-
-    <md-grid-tile data-ng-click="gotoNotif()" style="cursor" class="blue-low">
-    <md-grid-tile-footer class="blue">
-        <h3>Alertes et Notifications</h3>
-    </md-grid-tile-footer>
-    <md-icon md-svg-icon="mail" alt="Cliquer pour visualiser les notifications" class="name"></md-icon>
+        <ng-md-icon icon="dashboard"  size="64"></ng-md-icon>
+        <md-grid-tile-footer  class="yellow-darker  bleu-petrole-font"><h3>Voir mon tableau de bord</h3></md-grid-tile-footer>
     </md-grid-tile>
     
-        <md-grid-tile data-ng-click="gotoTest1()" style="cursor" class="blue-low">
-    <md-grid-tile-footer class="blue">
-        <h3>Test1</h3>
-    </md-grid-tile-footer>
-    <md-icon md-svg-icon="mail" alt="Cliquer pour visualiser les notifications" class="name"></md-icon>
+    <md-grid-tile data-ng-click="gotoApiculteurInfos()" style="cursor" alt="Cliquer pour modifier mes informations personnelles">
+    <ng-md-icon icon="quick_contacts_mail"  size="64"></ng-md-icon>    
+    <md-grid-tile-footer class="orange bleu-petrole-font"><h3>Modifier mes Informations</h3></md-grid-tile-footer>
     </md-grid-tile>
 
-    <md-grid-tile data-ng-click="gotoTest2()" style="cursor" class="blue-low">
-    <md-grid-tile-footer class="blue">
-        <h3>Test2</h3>
-    </md-grid-tile-footer>
-    <md-icon md-svg-icon="mail" alt="Cliquer pour visualiser les notifications" class="name"></md-icon>
+    <md-grid-tile data-ng-click="gotoNotif()" style="cursor">
+     <ng-md-icon icon="sms"  size="64"></ng-md-icon>
+     <md-grid-tile-footer class="orange-darker"><h3>Voir mes Alertes et Notifications</h3></md-grid-tile-footer>
+    </md-grid-tile>
+    
+        <md-grid-tile data-ng-click="gotoTest1()" style="cursor">
+    <md-grid-tile-footer><h3>Test 1</h3></md-grid-tile-footer>
+    </md-grid-tile>
+
+    <md-grid-tile data-ng-click="gotoTest2()" style="cursor">
+     <md-grid-tile-footer><h3>Test 2</h3></md-grid-tile-footer>
     </md-grid-tile>
     
 </md-grid-list>
