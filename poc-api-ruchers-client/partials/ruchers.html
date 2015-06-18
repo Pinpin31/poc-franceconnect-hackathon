@@ -3,39 +3,29 @@
 <div data-g-controller="apiculteurController">
           
                 
-                    <div layout="row" layout-margin>
-                <div flex>
-                 <table cellspacing='0'>
-                        <thead>
-                            <tr>
-                                <th>
-                        <p>Année</p>    
-                        </th>
-                        <th>
-                        <p>Nom</p>    
-                        </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="rucher in apiculteurs[0].ruchers">
-                                <td>
-                                    {{rucher.annee}}
-                                </td>
-                                <td>
-                                    {{rucher.nom}}
-                                </td>
-               
-                            </tr>
-                        </tbody>
-                    </table>
-                    <md-button class="md-raised md-primary" data-ng-click="addRucher()">Géolocaliser un nouveau rucher</md-button>
-                    </div>
-                
-                    <div flex>
-                        <leaflet defaults="defaults" center="center" height="480px" width="640px" markers="markers"></leaflet>
-                    </div>
-                    
-                   </div>
+    <div layout="row" layout-margin>
+        <div flex>
+        
+            <leaflet defaults="defaults" center="center" height="480px" width="100%" markers="markers">
+                <md-button class="md-raised md-primary" data-ng-click="addRucher()" style="z-index:10000;opacity: 0.8;margin-top: 5px;right: 0px;border-right-width: 1px;right: 5px;position: absolute;color: rgb(0, 0, 0);font-weight: bold;border-color: black;">Géolocaliser un nouveau rucher</md-button>
+            </leaflet>
+            
+            <table class="responsive-table" width="100%">
+                <thead>
+                    <tr>
+                        <th><p>Année</p></th>
+                        <th><p>Nom</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="rucher in apiculteurs[0].ruchers">
+                        <td>{{rucher.annee}}</td>
+                        <td>{{rucher.nom}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-    <br/>
+    </div>
+
 </div>
