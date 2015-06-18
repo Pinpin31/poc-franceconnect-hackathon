@@ -40,6 +40,7 @@
                 }
                 
                 function loadMarkers(){
+                    $scope.nbMarkers=0;
                     $scope.markers = {};
                                 for (var i = 0, len = $rootScope.apiculteurs[0].ruchers.length; i < len; i++) {
                                     $scope.markers[i] = {
@@ -48,6 +49,7 @@
                                         message: $rootScope.apiculteurs[0].ruchers[i].nom,
                                         icon: local_icons.yellow_icon
                                     };
+                                    $scope.nbMarkers=$scope.nbMarkers+1;
                                 }
                 }
 
@@ -90,7 +92,8 @@
                                         lng: position.coords.longitude,
                                         message: 'Nouveau Rucher'
                                     };
-                        $scope.markers['marker']= rucher;
+                        $scope.nbMarkers=$scope.nbMarkers+1;
+                        $scope.markers['marker'+$scope.NbMarkers]= rucher;
                         $rootScope.apiculteurs[0].ruchers.push({"annee": "2015",
                                                             "nom": "Nouveau Rucher",
                                                             "lat": position.coords.latitude,
@@ -107,10 +110,12 @@
                         
                     $scope.$on("leafletDirectiveMap.click", function(event, args){
                         var leafEvent = args.leafletEvent;
-                        var position = new Position();
-                        position.coords.latitude=leafEvent.latlng.lat;
-                        position.coords.longitude=leafEvent.latlng.lng;
-
+                        var position = {
+                            coords:{
+                                "latitude":leafEvent.latlng.lat,
+                                "longitude":leafEvent.latlng.lng
+                            }
+                        }
                         newRucher(position);
                     });
                     
