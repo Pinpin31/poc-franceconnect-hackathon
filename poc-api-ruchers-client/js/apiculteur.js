@@ -46,13 +46,14 @@
                         defaults: {
                             tileLayer: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                             maxZoom: 20
-                        },
-                        center: {
+                        }
+                    });
+                    
+                    $scope.center = {
                             lat: 43.56,
                             lng: 1.47,
                             zoom: 11
-                        }
-                    });
+                        };
                     
                     $scope.addRucher = function () {
                         
@@ -61,6 +62,7 @@
                         } else {
                             console.log("Geolocation is not supported by this browser.");
                         }
+                        
                     };
                     
                     function newRucher(position) {
@@ -72,12 +74,19 @@
                                         message: 'Nouveau Rucher'
                                     };
                         $scope.markers['marker']= rucher;
-                        $scope.apiculteurs[0].ruchers.push({"annee": "2014",
-                    "nom": "Nouveau Rucher",
-                    "lat": position.coords.latitude,
-                    "lng": position.coords.longitude
-                });
-                    }
+                        $scope.apiculteurs[0].ruchers.push({"annee": "2015",
+                                                            "nom": "Nouveau Rucher",
+                                                            "lat": position.coords.latitude,
+                                                            "lng": position.coords.longitude
+                                                            });
+                        
+                        $scope.center = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude,
+                                zoom: 11
+                            };
+                        
+                        }
                     
                     function showError(error) {
                         switch(error.code) {
