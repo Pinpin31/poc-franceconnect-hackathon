@@ -1,10 +1,10 @@
 {
     "apiculteurs": [
         {
-            "nom": "Menant",
-            "prenom": "Thomas",
+            "nom": "Dupond",
+            "prenom": "Pierre",
             "dateNaissance": "01/01/1970",
-            "email": "thomas.menant@gmail.com",
+            "email": "pierre.dupont@gmail.com",
             "adresse": {
                 "libelle": "8 rue des tulipes",
                 "codePostal": "31000",
