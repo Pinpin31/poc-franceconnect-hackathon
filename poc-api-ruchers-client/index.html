@@ -27,11 +27,19 @@
         <!--<md-button class="menu" hide-gt-sm ng-click="toggleList()" aria-label="Show Menu">
             <md-icon md-svg-icon="menu"></md-icon>
         </md-button>-->
+        
+        <div flex>
+        <div layout="row" layout-margin>
         <span flex></span>
-        <h1><span data-ng-click="gotoStart()" class="cursor-hand"><img src="assets/svg/bee.svg" width="82px" height="50px"/> API-RUCHERS</span></h1>
+        <h1><span data-ng-click="gotoStart()" class="cursor-hand">
+        <img src="assets/svg/bee.svg" width="82px" height="50px"/> API-RUCHERS</span></h1>
         <span flex></span>
-        <france-connect-info></france-connect-info>
         <france-connect-link></france-connect-link>
+        </div>
+        <div layout="row" layout-margin>
+        <france-connect-info></france-connect-info>
+        </div>  
+        </div>
 
     </md-toolbar>
     
