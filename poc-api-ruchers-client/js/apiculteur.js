@@ -117,10 +117,8 @@
                 $scope.$on("leafletDirectiveMap.click", function (event, args) {
                     var leafEvent = args.leafletEvent;
                     var position = {
-                        coords: {
                             "latitude": leafEvent.latlng.lat,
                             "longitude": leafEvent.latlng.lng
-                        }
                     };
                     newRucher(position);
                 });
