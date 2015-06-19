@@ -10,9 +10,8 @@ angular.module("declarerModule", [])
                     
                     $mdDialog.show(
                     $mdDialog.alert()
-                        .parent(angular.element(document.body))
                         .title('Déclaration validée')
-                        .content('Merci pour votre déclaration, elle est validée.')
+                        .content('Merci pour votre déclaration !')
                         .ariaLabel('Alert Dialog Demo')
                         .ok('Fermer')
                         .targetEvent(ev)
