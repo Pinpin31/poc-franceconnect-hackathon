@@ -11,6 +11,7 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
     "franceConnectModule",
     'autocomplete',
     'apiculteurModule',
+    'declarerModule',
     'dashboardModule',
     'ngMdIcons'
 ])
@@ -41,6 +42,9 @@ var adresseTestApp = angular.module("adresseTestApp", ["adresseServiceModule",
                         }).when('/dashboard', {
                              templateUrl: 'partials/dashboard.html',
                              controller: 'dashboardController'
+                        }).when('/declarer', {
+                             templateUrl: 'partials/declarer.html',
+                             controller: 'declarerController'
                         })
                         .otherwise({
                             redirectTo: '/start'

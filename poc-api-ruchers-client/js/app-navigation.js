@@ -33,6 +33,10 @@ angular.module("appNavigationModule", [])
             $scope.gotoRucher = function () {
                 $location.path('/ruchers');
             };
+            
+            $scope.gotoDeclaration = function () {
+                $location.path('/declarer');
+            };
 
             $scope.goBack = function(){
                 $location.path('/start');
