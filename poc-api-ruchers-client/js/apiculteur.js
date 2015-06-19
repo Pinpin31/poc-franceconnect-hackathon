@@ -78,19 +78,17 @@
 
                 $scope.addRucher = function () {
 
-                    //if (navigator.geolocation) {
-                    //    navigator.geolocation.getCurrentPosition(newRucher, showError, {
-                    //                        enableHighAccuracy: true,timeout : 50000
-                    //                    });
-                    //} else {
-                    //    console.log("Geolocation is not supported by this browser.");
-                    //}
-
                     leafletData.getMap().then(function (map) {
                         map.locate({setView: true, maxZoom: 11});
                     });
-
                 };
+
+                $scope.center = {
+                    lat: 43.56,
+                    lng: 1.47,
+                    zoom: 11
+                };
+
 
                 function newRucher(position) {
                     console.log("Latitude: " + position.latitude +
@@ -112,21 +110,20 @@
                     $scope.center = {
                         lat: position.latitude,
                         lng: position.longitude,
-                        zoom: 11
                     };
 
                 }
 
-                //$scope.$on("leafletDirectiveMap.click", function(event, args){
-                //    var leafEvent = args.leafletEvent;
-                //    var position = {
-                //        coords:{
-                //            "latitude":leafEvent.latlng.lat,
-                //            "longitude":leafEvent.latlng.lng
-                //        }
-                //    };
-                //    newRucher(position);
-                //});
+                $scope.$on("leafletDirectiveMap.click", function (event, args) {
+                    var leafEvent = args.leafletEvent;
+                    var position = {
+                        coords: {
+                            "latitude": leafEvent.latlng.lat,
+                            "longitude": leafEvent.latlng.lng
+                        }
+                    };
+                    newRucher(position);
+                });
 
                 function showError(error) {
                     switch (error.code) {
