@@ -1,5 +1,100 @@
 <go-back-directive title="Déclarer"></go-back-directive>
 
+<div data-g-controller="declarationController">                
+    <form name="userForm">
+    
+        <md-toolbar>
+            <span flex></span>
+            <h3 class="md-toolbar-tools md-toolbar-tools-bottom">
+                <span class="md-flex">1. Je vérifie mes informations</span>
+            </h3>
+        </md-toolbar>
+
+            <p>Nom : {{apiculteurs[0].nom}}</p>
+            <p>Prénom : {{apiculteurs[0].prenom}}</p>
+            <p>Date de naissance : {{apiculteurs[0].dateNaissance}}</p>
+
+            <table cellspacing='0'>
+                <thead>
+                    <tr>
+                        <th>
+                <p>Origine</p>    
+                </th>
+                <th>
+                <p>Type d'identifiant</p>    
+                </th>
+                <th>
+                <p>Valeur</p>    
+                </th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="identifiant in apiculteurs[0].identifiants">
+                        <td>
+                            {{identifiant.origine}}
+                        </td>
+                        <td>
+                            {{identifiant.typeIdentifiant}}
+                        </td>
+                        <td>
+                            {{identifiant.valeurIdentifiant}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            
+        <md-toolbar>
+            <span flex></span>
+            <h3 class="md-toolbar-tools md-toolbar-tools-bottom">
+                <span class="md-flex">2. Je valide mes ruchers</span>
+            </h3>
+        </md-toolbar>
+        <table class="responsive-table" width="100%">
+                <thead>
+                    <tr>
+                        <th><p>Année</p></th>
+                        <th><p>Nom</p></th>
+                        <th><p>Nombre de ruches</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="rucher in apiculteurs[0].ruchers">
+                        <td>{{rucher.annee}}</td>
+                        <td>
+                            <md-input-container>
+                                <input ng-model="rucher.nom">
+                            </md-input-container>
+                        </td>
+                        <td>
+                            <md-input-container>
+                                <input ng-model="rucher.nbRuches">
+                            </md-input-container>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            
+            <br />
+            <md-button class="md-raised md-primary" ng-click="validerDeclaration($event)" style="background-color:#F25749;margin-left:35%">Je valide ma déclaration !</md-button>
+            
+            <br />
+            <br />
+            
+            <div ng-if="alert">
+                <br/>
+                <b layout="row" layout-align="center center" class="md-padding">
+                    {{alert}}
+                </b>
+            </div>
+            
+            
+            
+        
+    </form>
+</div>
+
 
 
   

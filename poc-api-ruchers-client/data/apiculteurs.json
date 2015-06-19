@@ -21,13 +21,13 @@
                     "valeurIdentifiant": "1234567891011"
                 }],
             "ruchers": [{
-                    "annee": "2014",
+                    "annee": "2015",
                     "nom": "Rucher#1 : chez Guigui",
                     "nbRuches":10,
                     "lat": 43.540379,
                     "lng": 1.467993
                 }, {
-                    "annee": "2014",
+                    "annee": "2015",
                     "nom": "Rucher#2 : rue des abeilles",
                     "nbRuches":15,
                     "lat": 43.604394,
