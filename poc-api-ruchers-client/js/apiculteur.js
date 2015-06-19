@@ -57,15 +57,18 @@
                         defaults: {
                             tileLayer: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                             maxZoom: 20
-                        },
+                            },
                         events: {
                             map: {
                                 enable: ['click', 'drag', 'blur', 'touchstart'],
                                 logic: 'emit'
+                            },
+                        controls: {
+                            draw: {}
                             }
                         }
                     });
-                    
+                        
                     $scope.center = {
                             lat: 43.56,
                             lng: 1.47,
@@ -93,7 +96,7 @@
                                         message: 'Nouveau Rucher'
                                     };
                         $scope.nbMarkers=$scope.nbMarkers+1;
-                        $scope.markers['marker'+$scope.NbMarkers]= rucher;
+                        $scope.markers['marker'+$scope.nbMarkers]= rucher;
                         $rootScope.apiculteurs[0].ruchers.push({"annee": "2015",
                                                             "nom": "Nouveau Rucher",
                                                             "lat": position.coords.latitude,
@@ -102,8 +105,7 @@
                         
                         $scope.center = {
                                 lat: position.coords.latitude,
-                                lng: position.coords.longitude,
-                                zoom: 11
+                                lng: position.coords.longitude
                             };
                         
                         }

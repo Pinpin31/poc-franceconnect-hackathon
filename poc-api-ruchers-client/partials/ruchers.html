@@ -1,4 +1,4 @@
-<go-back-directive title="Localiser Mes Ruchers"></go-back-directive> 
+<go-back-directive title="Géolocaliser mes ruchers"></go-back-directive> 
 
 <div data-g-controller="apiculteurController">
           
@@ -6,8 +6,11 @@
     <div layout="row" layout-margin>
         <div flex>
         
+        
+            <md-button class="md-raised md-primary" data-ng-click="addRucher()">
+                Utiliser ma position
+            </md-button>
             <leaflet defaults="defaults" center="center" height="480px" width="100%" markers="markers" event-broadcast="events">
-                <md-button class="md-raised md-primary" data-ng-click="addRucher()" style="z-index:10000;opacity: 0.8;margin-top: 5px;right: 0px;border-right-width: 1px;right: 5px;position: absolute;color: rgb(0, 0, 0);font-weight: bold;border-color: black;" >Géolocaliser mes ruchers</md-button>
             </leaflet>
             
             <table class="responsive-table" width="100%">
