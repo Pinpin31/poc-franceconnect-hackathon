@@ -1,0 +1,14 @@
+Installation
+------------
+Construire le jar du client dans poc-api-ruchers-client en suivant le README
+
+Utiliser Maven 2
+
+Déploiement
+-----------
+
+mvn clean install
+
+ou
+
+mvn clean tomcat7:run
